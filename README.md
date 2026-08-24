@@ -138,3 +138,4 @@ secrets. Provider keys must be in `.env` or configured as LangSmith workspace
 secrets — a value exported in your shell is not read. Set
 `LANGSMITH_WORKSPACE_ID` or pass `--workspace-id` if your LangSmith API key
 requires a workspace selection.
+# simple_sentiment_agent
