@@ -14,14 +14,80 @@ forex-sentiment-agent/
   sandbox/__init__.py  # managed LangSmith sandbox (delete `sandbox/` to opt out)
   tools/               # optional custom tools
   middleware/          # optional middleware
-  skills/              # optional skills synced to Context Hub
-  connectors/          # optional MCP server declaration
+  skills/scrapling-official/  # official Scrapling skill synced to Context Hub
+  connectors/scrapling.py     # remote HTTP MCP connector loaded by MDA
+  scrapling-server/            # isolated Scrapling MCP server environment
+  scripts/start_scrapling_mcp.py
+  tests/
 ```
 
 ## Install
 
 ```bash
 uv sync
+uv sync --project scrapling-server
+uv run --project scrapling-server --frozen scrapling install --force
+```
+
+The Scrapling server intentionally has its own environment. Scrapling 0.4.15
+uses MCP 2.x, while the MDA 0.5.3 connector runtime uses
+`langchain-mcp-adapters` with MCP 1.x. Separating the HTTP server from the agent
+client avoids an unsatisfiable single-environment dependency graph.
+
+## Scrapling web scraping
+
+`skills/scrapling-official/` vendors the upstream Scrapling 0.4.15 agent skill,
+including its references, examples, and BSD-3-Clause license.
+
+The MDA runtime discovers `connectors/scrapling.py`, connects to the configured
+Streamable HTTP endpoint when it initializes the agent, and caches all 13
+allowlisted tools. Tool names are exposed with the `scrapling__` prefix. Startup
+fails instead of silently dropping scraping capability when the endpoint cannot
+be reached.
+
+### Local development
+
+Generate a token and export it in the terminal that runs the server. Put the
+same two variables in the project `.env` so `mda dev` can authenticate to it:
+
+```bash
+export SCRAPLING_MCP_AUTH_TOKEN="$(openssl rand -hex 32)"
+export SCRAPLING_MCP_URL="http://127.0.0.1:8000/mcp"
+
+uv run python scripts/start_scrapling_mcp.py
+```
+
+The launcher reads the token from the environment rather than putting it in the
+process list. It binds to `127.0.0.1:8000` by default. Run `mda dev` in a second
+terminal after the MCP server is listening.
+
+### Managed deployment
+
+LangSmith Cloud cannot reach a server bound to the developer machine. Run the
+isolated `scrapling-server` project on a network-accessible host, terminate TLS
+in front of it, and configure:
+
+```text
+SCRAPLING_MCP_URL=https://scrapling.example.com/mcp
+SCRAPLING_MCP_AUTH_TOKEN=<same secret configured on the server>
+```
+
+For a directly exposed server, bind with `--host 0.0.0.0` and repeat
+`--allowed-host host.example.com:PORT` for accepted hostnames. Keep
+authentication enabled; never expose `--no-auth` on a public interface. MDA
+forwards non-reserved `.env` values as deployment secrets.
+
+### Tests
+
+The default suite validates the connector declaration and skips the networked
+smoke test. The opt-in live test starts the authenticated local server, verifies
+discovery of all 13 prefixed tools, and fetches `https://example.com` through
+both `scrapling__make_request` and the Chromium-backed `scrapling__fetch`:
+
+```bash
+uv run python -m pytest -q
+RUN_SCRAPLING_MCP_LIVE=1 uv run python -m pytest tests/test_scrapling_mcp_live.py -q
+mda build
 ```
 
 ## Evaluate
@@ -79,8 +145,9 @@ embeds it and runs it once when the sandbox is first provisioned.
 
 ## Optional Runtime Pieces
 
-Add `connectors/mcp.py` to attach MCP servers. The file must export a named
-`connector` declaration.
+`connectors/scrapling.py` exports the required module-level `connector`
+declaration. MDA supports remote HTTP/SSE MCP transports only; it does not run
+the Scrapling stdio server inside the managed agent.
 
 ## Deploy
 
@@ -138,4 +205,6 @@ secrets. Provider keys must be in `.env` or configured as LangSmith workspace
 secrets — a value exported in your shell is not read. Set
 `LANGSMITH_WORKSPACE_ID` or pass `--workspace-id` if your LangSmith API key
 requires a workspace selection.
-# simple_sentiment_agent
+
+Scrapling additionally uses `SCRAPLING_MCP_URL` and
+`SCRAPLING_MCP_AUTH_TOKEN`. Never commit the token.

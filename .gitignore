@@ -11,7 +11,10 @@ evals/harbor-jobs/
 
 # Dependencies.
 node_modules/
+.venv/
 __pycache__/
+.pytest_cache/
+.scrapling_cache/
 
 # OS / editor junk.
 .DS_Store
