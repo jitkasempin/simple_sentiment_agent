@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-08-26T15:37:29Z",
+  "changed_file": "/tmp/probe_tools.py",
+  "test_command": "pytest -v",
+  "related_test": "",
+  "recommendation": "テストの実行を推奨します"
+}
