@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:2fa73001b49ec4efb488555fe3027c4e791815e36daf31c13d94a6d367e6a4b1",
+  "claims": [
+    {
+      "id": "claim_2953f44d538847ec94c1ad7d5d376d47",
+      "statement": "The project isolates the Scrapling MCP server in a separate Python environment to resolve version incompatibilities between Scrapling 0.4.15 (MCP SDK 2.x) and the MDA 0.5.3 connector runtime (MCP SDK 1.x via langchain-mcp-adapters).",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L32-L35",
+          "version": "repo-lines-v1:sha256:d6d3db0a32383d86fa665611e99199d00e2e320244dad2c6352342d19c44a244:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2I0NTRkMTQ0ZDJhMDk4YmM4MDBlNTgyZTJiNWFiZTAyZTA0Njk3MzIyMDk3NjA0ZGU1YWQ0YTJlYTQxNmQ0ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGEyOWRkZGMzMzhkY2VlMDlmN2NiMjFkN2Q4ODVhYTc3MTViOTA1NGM3MDYyYzgyMGM0MzNlMzRjZTViNjhlOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNGJhODM1NWI1NDE4NTg0YmI2ZWM0NGI5NTY4ODRjMTYwYjNlMmFkMzI3NzRhMWQwYmExYTM0YTVmOTU4MmM0MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjA4MWIxYjM0OWI2MmQ3NzFlNTc3NzU2YWEwOTlmN2I3MzRlMGZhMzAxYWQ1ODllM2NlNmEzZGRjNDkxOTM1ZiJ9"
+        },
+        {
+          "resource": "repo://pyproject.toml#L6-L11",
+          "version": "repo-lines-v1:sha256:5fa3b24cee6e01f89670aa85e1ccf1e49c2d94fd7e28bd3e81d19d3ff44c30dc:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWQ5NWY1ZTllZGUwMTgxNjA0M2MwNzk3YWNlOGRhMmFjNGU5OWE4YTZhNjEwZmE5ODU3MGVmMzRiOTM1NjEwOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjk0MTZlMDlmNzhiYTMxNmMwMzI1NjgyMTNiODU1ZWU3NTZlNDE1NjVkOTE4ZjA5NTE5YzgxZmQ2MjBmNDA2MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGU1YjdlOGQ5MDNiMGUyOTVjODVmMmFjMThiN2Y3ZjE2MmQyOTU4OGZjMWVmZTY1MWFmYTA2YzI1ZTIzYWU0NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjg0Yjg2YjYyMTI4YjZiYmQ0YTUyZDRkMzg2NjNhNmY3OTc1YzAwM2Y3YWZlNTc3MTAwNDc1OWY1OWVhYmZkNCJ9"
+        },
+        {
+          "resource": "repo://scrapling-server/pyproject.toml#L6-L8",
+          "version": "repo-lines-v1:sha256:58a11e5a6e59ae8d7ad25bca98c97e83c2693a0c08f617c22c0051b5bc985d3a:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWQ5NWY1ZTllZGUwMTgxNjA0M2MwNzk3YWNlOGRhMmFjNGU5OWE4YTZhNjEwZmE5ODU3MGVmMzRiOTM1NjEwOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjk0MTZlMDlmNzhiYTMxNmMwMzI1NjgyMTNiODU1ZWU3NTZlNDE1NjVkOTE4ZjA5NTE5YzgxZmQ2MjBmNDA2MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjUwNGJhYmUwMmFhZmI0OTYxYTkwMmFkYTU4MTYxOTNkMjY4YjdmZDkxOWFmZTVlOGFlOGZmYjk3ZDI2Y2QzZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmFmZjJjZTJmYTEzOWY0YWQwNjg1ODM4OGJhYzU0YTdkZTU5YmEzOGIwMzkzOWM3ZTIxOGUyYzc3MWYzNjY5MCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_5299c4980a694ed9af1436732338e296",
+      "statement": "Environmental credentials MYFXBOOK_EMAIL and MYFXBOOK_PASSWORD are read from os.environ by the Myfxbook provider to authenticate session requests against the Myfxbook API and are forwarded as deployment secrets by mda deploy.",
+      "evidence": [
+        {
+          "resource": "repo://.env.example#L7-L9",
+          "version": "repo-lines-v1:sha256:99f6549c4f1e6716f1db9096f68317d63eacf9e82e41efc5fbf4bfabc084e98b:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjhlNmZkY2IxZTMzYjZkYTc3MWQ1YmIwZmEwMDQ1YjVjYjJlMDc4NzBiMmNlMWM1ZDQ5MjE1NjhhYWQ4ZTNlNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZTIxNzM5NTFmODYxOGQ4Njg5ODJiNjE3MWJlYTQ3YWIxM2RhMGZiMDk3YTRmNTU3NzM5YzIxOTY1N2RkMjhmMSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNDdkOTk0NjQzMDgxYThkOTEyYjA2NGYxMjY5MDA3ZDU1YmQ2MDM3MjRkYWJkZTNjZWIzNTBiNmFkYzE3ZWZiMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://README.md#L202-L205",
+          "version": "repo-lines-v1:sha256:c93953ab4a3bb70ef58ddbaf8321d7b7a197cc943809f306c2955671e92418d2:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDllMjk1YWJlYzYwNTUzODU5Yjk3NzVkOTA5NWU1MjMxOWI3OGNjYmVjMmQxMjU0MTA1ODRlMzMwNjQxZmE3NiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzBlMWU2OWRmMzVhMTdkZGM5YTdiZGQ0YWU2ODIxMjhkZmExZWM0Yjk0OTg2ZTAyYjJlMTNhYzM0MWMyYTFlYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTVhZTk5ZWFjYTQwNmQzZDUwZTI5ZTM3M2QzMTdkNmYzNWUyMDcyZGI4NTVjNmExMzYyZGUzZmYwMmNlODJlZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjhhY2M3Y2I5YjgzMzFhYmFjMDc5NDM0ODhmODdkOTI1MWZiODUwNzhiNjViYzRlMDAyOGQxMmYxODcxY2UyYyJ9"
+        },
+        {
+          "resource": "repo://tools/providers/myfxbook.py#L36-L37",
+          "version": "repo-lines-v1:sha256:1363227d00acb5eba7c4058292073cbe323c0b93385f0874d63d83b405c14608:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTFmN2E4ZDg5YmIzYzhhNmQ5YTQ3MzAwZTBmNjNhYmM5YWJmYWViMzhhZmJiZTA4MjEyNjQzMmQ5NGMwODk1YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTU1NWI0ZGM0ODA1ZWQ0YjgwMDkzMjcwZDk3Y2FiMzRlZmYzYjJhYzFmYWQ4MTBmZTM4YTQ3ZDRiOGYwY2NiYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTcwYTg3NTE0NTA0N2E3MWEzMDY4NTM2MmYzMjYwY2Q3YjQ1MmMxNjhlOGQ5ZGZjYjNjYzViZmYxYjg0YTU1ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjJkNTdhYjRkMjM3MzZlOTIyYWVmMWZhMTcwNjc2NmEwYTM4N2QyMmFlOTUxN2I4NzcwZDU0YjhlNDAwMjVjMiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b07b5542fc13498bb55fd917140e1687",
+      "statement": "The Scrapling MCP connector requires SCRAPLING_MCP_URL and SCRAPLING_MCP_AUTH_TOKEN to authenticate HTTP requests to the remote Scrapling server, defaulting to http://127.0.0.1:8000/mcp when the URL is omitted.",
+      "evidence": [
+        {
+          "resource": "repo://connectors/scrapling.py#L40-L43",
+          "version": "repo-lines-v1:sha256:9b8ed5bf4c16ee246a6a5631f5492a185cef1c5d024719d67b4b966c8d0f3eaa:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGZhMTRkYWFkYjNkODJjNDQzZWFhMjkyYWQyYzkzYzQwMmE3MWRjMjE2NDFiMGM5NmVmMTZlNWRmMjNmNGM1MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5M2Y0MGUzNzgxZWI4OTZjODJkMDQ2YTA4MDY3YTExZTM1Y2RmMmYxZGZhZjI2ZmVhOTBiOGRiNjY3NjQxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGU2NjZlY2ZkNzIwYzlmZTBiNmE1YTUzYWM4YzA5OGIwYzE4MWQ0NDFmY2M1MzI0MTMwYTc4ZGJmMmY5ZDllZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWRhMzRiMmJlOTA0MWQyZWJhMjgzZmVmZTk2YzQ4NjYwOGM2MDIyNjAyY2E4M2VjMjNiNjU1MzBlOTI5ZGYxYyJ9"
+        },
+        {
+          "resource": "repo://connectors/scrapling.py#L9-L13",
+          "version": "repo-lines-v1:sha256:8f250e397190b69e1567cf68d1a5bebcffe193592ab52f52fd04f72fd1a4d2f8:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2M1MzM0YWI2NTg2YzZhZTA3NDYxYmMxMWY0ODA2ZTNiZDIyNWUxZTUyMTRjZThkYmQ4ZjA3YjM0ZTZhN2Q2ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMWY4YWUzY2FmOWI2ZjgyM2E0ODY1YTQ2OTNjNmMzYWEzZDY4MjlhZDEwOWIxODZlOTRjNWQ4NzgyYWQwYTMwNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzE3MTY4OGViNGI1OTY0M2EyZDI2NGE0NjI1MDY4YmZhMDA2N2Q1MTNmZWJkZWY0NDA3YTgwOWE2YzkwMDEyYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmJlZjI1Yzg3YmRmOWM1NDI0OGQ3MTE3Zjg4ZDJkYmM2MjhiZTZhZDI0NGM4M2RiYmE5NTI2N2QwZjZkODhmNCJ9"
+        },
+        {
+          "resource": "repo://tests/test_scrapling_connector.py#L30-L59",
+          "version": "repo-lines-v1:sha256:61fdcfdeefbddb4b909c44632146b8b463d690260a976795f08019e2f7eef50f:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1MDE1ZTRlNGQxNjkzY2RmZTEzZmVmMGNkNTNjNWQyZmU1YmUyYWU3ZGM0ZDI3ZDg0ZDYwZmZhOWNmNTZmZjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkwY2NlMWQxYjU3M2E2MzNiM2E1Y2UxNGQzYWUzYjUyZDkyYWFmZTI4MzRmNTUwZGI2NjNjYTcwNGRjYWMxNDAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc5MTRlMDRhMWQzNGE0MGJkYjJhMjlkMzYzZGRiNzk3ZWVlYjczOGUzMzBmMTk4ZWZjM2MxM2NhZjRkMjRjZDIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ec934d8b60544672b9949eaedaad187f",
+      "statement": "The local Scrapling launcher script enforces authentication by refusing to start without SCRAPLING_MCP_AUTH_TOKEN set in the environment and executes the isolated server via os.execvpe.",
+      "evidence": [
+        {
+          "resource": "repo://scripts/start_scrapling_mcp.py#L46-L50",
+          "version": "repo-lines-v1:sha256:c7c66680f4b6c2faed2a34e44e30fe3ffc418e74136bf9bd2460e5a22e5d729f:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDBmZDUzZmI5MGQ2ODcwNWNjYTlmMDM0MWIxNDliZDY3OTM1YTQ2NjY2OWU2OTMxZGRmYjM0MjEyNWUyYjI0OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTkwOWE1M2E2MThkMDI4ZTFkMzAwMGMwYTdhYmNlZWNiZTVmYjM3ZjRlNTExZWZlNDY2NDNmYWQ2ZTY2ODcyZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDZiY2NkMTFmYWI1MTcyODI1ZDQ5NzBjNDIxY2UwMjlhZjUwZDQ4MDNjNTI5Y2I3MDdkMDBjY2UzMDM3ODc4ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTVmMzUwZjFhZWJlMDgxMzM0NGE2MWExODRhMDI2NTNlNTlhZWMxNWMyODBhNDU0MGE2YjFjNmM2MDEyM2VkNyJ9"
+        },
+        {
+          "resource": "repo://scripts/start_scrapling_mcp.py#L56-L73",
+          "version": "repo-lines-v1:sha256:d776ce5add5e31c445b5458f5faba1795849a1f0b1e3805318fbf4c3e3aca010:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjllMzJlMWU1NGE3N2U4Yzc3YWI1Mjc2NTZkMzhkNjNlZTIyMGNmMmJiMmUzNjNiNWY2ODYzYWYwZGZhZWM5YTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjljZDQwNDMzZjYxNjY3NjhiMTM5MDQ4NDA5ZTJlNTFjODAwNjUyZTZlYzc1ZmRmZjU4M2U5ZmYyY2MyMjExZTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0MWUwZTRlOTdhOTljNjEzZmNkZjlhN2EwNmRiM2E3NmMxNjYwNTMyNTE1ODk1N2I2NTY0ZTg1ODFjMTUyMmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNkNDEzNDBjYzIzOWExNTljZTliNjAyMmU5ZjYzMjI4MzJlMmVhZDc2Y2FlOWU0NzU0ZDIxMGViOGZiNmQ1ZTgifQ"
+        },
+        {
+          "resource": "repo://tests/test_scrapling_launcher.py#L14-L30",
+          "version": "repo-lines-v1:sha256:16835d1d8bf7ebb20b2da36f601d84a1bd7ac2a3060d4edef428f14e79b24fb1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkYjEyNTEwZjBjOWUwMWU2NDA5MWI1ODU0NTRjMDU4ZmNmNmUyZWViNzQ1MjVjZDQ1OGViMjhiYTlmZDdiZWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRlNDQ0OTZlMTgxZjU3MDk1YjMwNGFkYzhmNmZiMzUxM2U0MjQ0NDdhZWUzYTg0YTMzZDZkNTY1NGQ5MWQ4YTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNhN2I3MmNiM2RmYTIyZmZiNmIxYTdkMTRhNzZhY2Y2ZGM0ZjhkODE0MjAyNjg3NjZjYTg4ZWE0ZmFmNjg0NzUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_32c84cb71ba74bbb8c2533f7a2d6600b",
+      "statement": "The Scrapling connector configures throw_on_load_error=True and tool prefixing, causing agent startup to fail immediately if the Scrapling server is unreachable and exposing 13 tools with the scrapling__ prefix.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L42-L46",
+          "version": "repo-lines-v1:sha256:a284b023718ec1f7f826aaaecddcc37a0ad064a5533738f1bde47c7b1b6b1886:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDBiMjE4MTY3MTZjZTg3YjRkNWJkZTk1ZWUyMGVlM2Q0OGVhOWQzY2FmOWMxMjVmOGUyOWE4MzM2OTY3ODhkMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYzVhNzE5MzRjZDM0NTk2Y2Q2NWY4Y2YxMjM1NDNjZTRkOWZhNTM3MGMxZGY1MDE5ODlmMzlmYjUzMjgyYzNiOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGFmNTUwZTI4NTU4YWEwMTNkOWUzYzllZDU5NzJkNDVhNTU4MmI1ZWVkMGEyYmY2YTk4OTc5ZGE2NGYyOGUxMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWE5MjQzYmQwNWRiYzQyZDI1ZDZhZDZhODMwY2ZjNDYxZDBmNGY4YTFiZGIyNWY4OWYwNTEyMWMwYWZiYTQ2YyJ9"
+        },
+        {
+          "resource": "repo://connectors/scrapling.py#L18-L32",
+          "version": "repo-lines-v1:sha256:3d95cc3cd2f1401e4ba07ebb4b74ab65b413ce275497197ea4133aa10116c956:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdiZGVkOTI2NWE3YjE1ZDNlYjJmZTE2MTc4NjE1ZTdlMmIwNDFlMjFlMzAwMzg2YjEzMzFkOTg2NGMzODQwY2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY5NDE2ZTA5Zjc4YmEzMTZjMDMyNTY4MjEzYjg1NWVlNzU2ZTQxNTY1ZDkxOGYwOTUxOWM4MWZkNjIwZjQwNjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg4NmIzYmQ5MzJhZmIyYTY3MzdlYzdiNjljZjA2ZDJlNmIwZjM3MzgxZjljYTBiYzk2M2MwMWYzZWI2MWJhNzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFlYjUyMWVlYTM5ZTk0OGE2ZDJlMDc5MDlmNTEzZDViMDIxMjI3NzkxMDY2ODA4NTg2NTQ0YzY3Y2IwNzdiYWQifQ"
+        },
+        {
+          "resource": "repo://connectors/scrapling.py#L45-L50",
+          "version": "repo-lines-v1:sha256:627373531427b2e046c55c434a3325acd129d1605e9a51f98ab94d2c655c08b3:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjc2OTcxMGM3ZThkYWJlZTUzODczMWUzYWNkNjk5NTkxODc0YzlmNzI2NWU5OTFmZmYyODY2Nzc2OTQ1ZTI2ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmFmYmEwNTI3YzM5NTNjNGI2ZTBlNWI1NzM5YmE4MzYxMmY4MDUzYmNkYzk0NjY3MzAxOTNjZDFkNTkwYjQwOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODg3MTAzN2VlMjgxOTI2YTMxMzQ4YzAzOWMxNTQ5Mzk0YzJkOTViYWIxYjBmOGRjNThhNzA4NDJmNGY2ODA1OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_69d2853a947247b89732807c1dcce433",
+      "statement": "Local agent development uses mda dev to run on the local LangGraph dev server, resolving dependencies automatically via uv without requiring a globally installed langgraph binary.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L118-L124",
+          "version": "repo-lines-v1:sha256:16bf439eebbefe184ed811de3301d7a105f410ce16ff08492689f40d47b37485:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWQyYmQ1ODBlYjgzNjU4MWM4OGI3MWM4YzkzZDgzMmNmYmI0NTAwMjQzZmUwN2U0MGQxMzlhOWNjNGJkMDJjMSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjk1YjI1OTI5ZTMzNzBjZDc0MjlmNTBlYzg0ZjM5Y2VjMDE2NzY3OTk1YWM0MzIxMjJlNGIxYTNlZmUwMmM0MyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjZiMGU3Nzc5NTNlY2RlYWVkZjUzMTUyZTFmZGRiNzYxNGQ1MmFlMTQ4ZDdlMWNmM2RmOWRkODI0MzNmMGE2MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWRjMDhiNWQxOTBlNTUzYmU1MGY4ZTViNWU5ODY1OWVhY2ZlYzRmMDNiYzEwOTNhYTBjOGEwZjEwYzQ2OWQ1ZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_7dcd33f7542c49d1a5bb31746261ba8c",
+      "statement": "Deploying to LangSmith Cloud using mda deploy packages project files into .mda/build, forwards non-reserved .env variables as deployment secrets, and provisions caller identity and thread-scoped sandboxes.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L154-L163",
+          "version": "repo-lines-v1:sha256:c8445d844ca4499eff28dcdc7dc7f1b254549f877ddfa4f743d9005fc6e868ae:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMwZGY5ODUwMmU1NzY5M2E5NjAyOTU3OWU5NWIzNTE1NjlhOGE4ZjBhMDU2MjhlNWM0NWU1M2VhNzJlNTY1NWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU5NmY1ODlkZDU0OTQ0ZWY1ZjQyMzkzY2EwZWQ0MzNkM2VjMzcwYWE4MGJiOTdjZTBkOTIzZTIzMjE4NTFlZTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4MGNmY2RhMzE3M2I3M2UxZDkwZjg2ZjkzMjhmNzllNWU3YzMxZmUyYjRkYzk2NzJkNDcwMWFkZTY2MzJkMzIifQ"
+        },
+        {
+          "resource": "repo://README.md#L202-L205",
+          "version": "repo-lines-v1:sha256:c93953ab4a3bb70ef58ddbaf8321d7b7a197cc943809f306c2955671e92418d2:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDllMjk1YWJlYzYwNTUzODU5Yjk3NzVkOTA5NWU1MjMxOWI3OGNjYmVjMmQxMjU0MTA1ODRlMzMwNjQxZmE3NiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzBlMWU2OWRmMzVhMTdkZGM5YTdiZGQ0YWU2ODIxMjhkZmExZWM0Yjk0OTg2ZTAyYjJlMTNhYzM0MWMyYTFlYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTVhZTk5ZWFjYTQwNmQzZDUwZTI5ZTM3M2QzMTdkNmYzNWUyMDcyZGI4NTVjNmExMzYyZGUzZmYwMmNlODJlZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNjhhY2M3Y2I5YjgzMzFhYmFjMDc5NDM0ODhmODdkOTI1MWZiODUwNzhiNjViYzRlMDAyOGQxMmYxODcxY2UyYyJ9"
+        },
+        {
+          "resource": "repo://identity.py#L5-L10",
+          "version": "repo-lines-v1:sha256:1cadaf44a2923e31c9a56246d307a3dcaafdd4479519326b3415359ad433d85a:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiNThlNjZmYzM3MzNhN2NiMDAyMGYyMDYzOTk4ZTQ3MWQxM2U5ODY3NzcyMzBmNmZmZmNhOWYxN2RlZjJlMCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTdmNjZjZDhiN2Y4MzIzMmE1NzAyYTBlMWEzMjU1ZDVjMjFmODVlNjliYjJkMjU4OWJmMzNmMjFjZDg4Mzg3YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODc3MzA1N2EyYWI1Y2JjMjFhOThkNDNiYmY0Njg2MjRmN2FjMWU1ZjU2M2E5N2Q0YzZhN2Q0MTk3ZDRmNzk5MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://sandbox/__init__.py#L9-L16",
+          "version": "repo-lines-v1:sha256:0312681e42f0faa05d8c3be579835e82447dc324159a1e736a54917a23417e84:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWVlMWRhY2UyNzI4ZjVlNDcyOGFjYmVmYTI4NjNkODQ2MWI4OTRiODk1ZDFiMGY5ZDliNWUxZDFjYTAxMzIxNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmFmYmEwNTI3YzM5NTNjNGI2ZTBlNWI1NzM5YmE4MzYxMmY4MDUzYmNkYzk0NjY3MzAxOTNjZDFkNTkwYjQwOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzllM2QzOGI2N2IyN2Y5ZmUxZDA5YzI2ZTQ1YmNiMjU0YzI0NjczNTA3ODEwYzkwOGZhZmFkODc1NDgyYzQzYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b0ec086b4d384d1c9a8c998cce18fcd3",
+      "statement": "Remote Scrapling servers used in cloud deployments require network accessibility, TLS termination, binding via --host 0.0.0.0, and accepted hostname configuration using --allowed-host.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L66-L78",
+          "version": "repo-lines-v1:sha256:05f7d563973745a708f8a53547034bec1baa0a6ccd1e7d61fac2dfabdafc1059:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhlYmI1OTIwZjVlNDdmMDc3MmZjMTlhOTc1YzRmNGQ5YTI5ZjVhOGY0MDhiNTIzOGI2MDU5MmIyZGIzODQ0NTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVlNjk0MTUwMDliZWIyOTg3OGFmOWJkYzgzNDgxZGMwOWEwYzZiNGZlYzRlMDQzODI4Y2JiMDI4NzBlM2E4NTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRhOTA4ZWIwYTJjYmMxODE0ZDZiNjkzYjM1ZWNkMmUyNTliMmJjNjlhNmUwOTU2YTBlZjM2MTQ3M2UxOTljZTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUyNzA5OTk2ZDM2N2QzYTdkZTc3OWVkOTlmMjA1YmJlNGQwODUyMjRhNWI1ZDc0MjFkYzNiZTkyZDdiYTc1ODgifQ"
+        },
+        {
+          "resource": "repo://scripts/start_scrapling_mcp.py#L17-L33",
+          "version": "repo-lines-v1:sha256:8193b42ec0055156030050d5a93c10e665e4046be492b560d808cbafee04e4a0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZiZTQzOWE0NzUwMzQyN2E0Yzc5ZjliZDNjM2MzZmMxZjkzZmQxZTdiNGM3YTE1MWQ1YWZhZDA0MDJkMWE4ZWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwYzFmMTg4ZjE0MmVkN2E4MjQ2ODBiMjA3MTcyYzU1MTliYzYxNGE0OGZkYTdjZjE2N2VkYjhkZGY3OTk1NmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU0ZWViZmRlNzg0OThjYzJlOTdjOWQyYzE0YWQyODQwOWJiN2EyYWFhNzFkNjI1YjQ1YWQzYmUzOTUyN2MwMzYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjlkZGM4OTM3NTAxN2YxODU1OWFmNDA4Njc2MzUyZDYyYWI0MDY1ODQxM2JhMTAyZWM1MmNmYTlkNjVkMWJjOTcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5cb88d2be090435faaa344a0f423ed8c",
+      "statement": "The CLI commands mda logs and mda delete provide operational lifecycle management by streaming deployed server logs and removing cloud deployment resources, tracing projects, Context Hub repositories, and sandboxes.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L177-L198",
+          "version": "repo-lines-v1:sha256:c5121c8c07dcf4336357ad1ff9246703367fd103e36449f71fdbd1689c4de560:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIwNmNjNDU4ODZlNzlkNjExNTg5NjU1ZTk4MDc0YTUyZTE0Yzc0M2E1MGJlY2QzNjMxYzU1OGU3ZmNhNTQ4NTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhkZDJhOGVkYjAxOTAzNWYyNjc1YmM5MGIwZWI2NmZlZjE2ZWQ2ZjA4ODRhM2Y2MzQzOTcyNmZmNmEzODRhMGYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY4MzkxMmQ3YWRmOGE1YzlmMmUyYjg2ZGQzNjlhZmE1YTI5YmM3ZDFmZGM5NjVmNGI0ZWI0YWJhMjA2Njk4MTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE1YWU5OWVhY2E0MDZkM2Q1MGUyOWUzNzNkMzE3ZDZmMzVlMjA3MmRiODU1YzZhMTM2MmRlM2ZmMDJjZTgyZWQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_603329ddac14482a95b3cf46f68e3ac4",
+      "statement": "The test suite provides offline connector contract validation as well as an opt-in live integration test enabled by RUN_SCRAPLING_MCP_LIVE=1 that verifies unauthenticated rejection and tool execution against live web endpoints.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L82-L91",
+          "version": "repo-lines-v1:sha256:ab19c89894eb36fc350144dd298bd014d304755cdd28fb9801549e562e71adab:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJlODE1NzY3YzE3NGMwOGVkNDc4MjQ2NDU1ZTMzMzI2NDhkNTIzZWIwOGYwYjBlOTgxM2VmOTY1MjAzMDVlZTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3YzA2YzU2MWQ1YzMyNzM0MzY4NTI2OGE0NmIzMzkxZjM5OThlZWU4OTBkMmJlNTFmMGQyMWNjNGE1M2FlNmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUyNzA5OTk2ZDM2N2QzYTdkZTc3OWVkOTlmMjA1YmJlNGQwODUyMjRhNWI1ZDc0MjFkYzNiZTkyZDdiYTc1ODgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYxZjk5YzhkZTQ1MjBlNTliYmYyYTY4MTk5YzJjMmZkNzM0MjI3YjU3YjU0N2NlMGY4ZWJmZjFjYjRjOTA5NWEifQ"
+        },
+        {
+          "resource": "repo://tests/test_scrapling_mcp_live.py#L34-L37",
+          "version": "repo-lines-v1:sha256:6f9a8f288bd87fcf16c1398c6794205fa1fdc2343474e1ca27f258ed2bb94b8a:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDBhYWNmNTkzMDg0MDMxNjhkM2U2ZTMyNDllZDVhYTJmNzNkNmRhMTYzNGM5ZGJkNWM2YjkyMDk1YjE1ZDk4OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmFmYmEwNTI3YzM5NTNjNGI2ZTBlNWI1NzM5YmE4MzYxMmY4MDUzYmNkYzk0NjY3MzAxOTNjZDFkNTkwYjQwOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjJkNzhjZTNkMWM4YzIzMjUzNTQ5ZGVmMTUwYjIyMzFjMTM2Y2E2Y2U4ZTg4OWQ4NDJmYjE4YWU5NTYzY2QzNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTYyMWY3MjcyMzkzYjEyNTE2ZGI3MzYyZjBmOTFmYTI1MzNmYjBlODg0MWI0MWUxZTliZmU2OWY4MzhlYzc4NiJ9"
+        },
+        {
+          "resource": "repo://tests/test_scrapling_mcp_live.py#L89-L131",
+          "version": "repo-lines-v1:sha256:9e34df4e8d982eeb4bdfca2139676a320ce36136b1b8bf8bcac812ab4bec79e3:eyJzZWxlY3RlZExpbmVDb3VudCI6NDMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg5MTgzMGE1NzQ5ZDdiOWZhYWJhYWM2MjM5NWYzYmU0YTA0NGNlNmE4Y2I3MjgwM2VjNDI4YjczMWUzMmExNTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlmYmZmZWY1ZWNjOWNkODRhOTdlNWVmNzFiODMzOGExZWU0OWQ5NDRkMTAxYjU4N2Q5MTUwODY3N2QzMDkwZDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNlYTExMDE4MTY0ZWYxZDkwYjJjOWMzZjBjZjU3NDgzYjk3NjNjMjhjZDk4YTJlNjVjNjUwNTQ3NWVlZTI2MjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM1MDUwNTgxMWNhMDI5OWE5OTczMDEwMjhiMjMwMDlmYjA1MmYwMDZiYjY1ODkxNTdmMzQxYjU0NjMzYWEwMDQifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.4.3",
+    "at": "2026-08-29T07:11:00.657Z"
+  }
+}

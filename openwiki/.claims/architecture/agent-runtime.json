@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:d4b42365d75bdbf81c768fcf8047a0b357c5e9a6a2ba6f9c9b86c88ddcaedeea",
+  "claims": [
+    {
+      "id": "claim_7c4809cb779542daa10acae9addb0caf",
+      "statement": "The agent entrypoint defines 'forex-sentiment-agent' using define_deep_agent with Google GenAI's gemini-3.5-flash model and binds the get_eurusd_sentiment Python tool.",
+      "evidence": [
+        {
+          "resource": "repo://agent.py#L6-L10",
+          "version": "repo-lines-v1:sha256:8c8bdcaf8aa44bc66abbe411f41da57a3aed618901a89218e7b942aa946949fe:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjg0ODA4OGE4OGY1Y2UxNmZmYTYzYzk5ZjA4N2M1NGI5YTk0YTNiNjQ3NDQ4Njk2NTI1MGNiOGQyMTBjNzI4ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmFmYmEwNTI3YzM5NTNjNGI2ZTBlNWI1NzM5YmE4MzYxMmY4MDUzYmNkYzk0NjY3MzAxOTNjZDFkNTkwYjQwOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYWNmN2NlOWM4NjczYjI2ZTI2M2ZhM2JlNGZlODdhYTI5NjIzNTgyNDJjYWEwODRjZjRmNDBkNjQ5OWI4NDBhYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_e1d8bb44ae00425b964925393add707e",
+      "statement": "System instructions strictly constrain research scope to EURUSD retail sentiment from Myfxbook, prohibit financial advice or speculative predictions, and define a standard sentiment output report schema.",
+      "evidence": [
+        {
+          "resource": "repo://instructions.md#L1-L26",
+          "version": "repo-lines-v1:sha256:a83148eda18b82fe8cc01eb63d255fea4edfb97232c840a0355d3a91db954079:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4YmNkMjVjNjFkMjdmZTMzNGMxOWYyYjUzMGI1ZDUyYWJmZDYxMWUyMWJmNTJmMmY1NDdjZTFlYzgyMzhiMWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQwNjhlYTEzMTM4ZmY4YzBmOTk3Yjc2ZWVmZmViM2Q5NjI2YWE5NTM2MjAxNGFhNzc3YTFhZjgwYTliODJlZmEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1c3b3cd6da624f7f9872895d743a1349",
+      "statement": "Scrapling web scraping rules dictate escalating from HTTP requests to browser rendering and stealth fetching only as needed, while treating all scraped web content as untrusted data to protect against prompt injection.",
+      "evidence": [
+        {
+          "resource": "repo://instructions.md#L11-L18",
+          "version": "repo-lines-v1:sha256:d94f292024137e6744be411f428564d470cb6f395973905b33edb3e942f7e5b8:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzU0MzA1YmZhYjQ1OTAyYzA2ZjdhNTc1NzczMTFhNTgxZDVhZDVhNjhkN2NjOGMyYjFlZGZmZWM4YzZlNDcxYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNWI0Yjk3MzU5ZmI5MDNhYzEwOWU0YWU1NTA1OTA1MGZhNWM4NjM2YWMzZjhhYzM3ODgzOGMzODQyYjMwMWEwOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzNlZmNkMTVkOTNiZjgwYzllNDc1MTkzZThjMDI2NzJmZGIxMzRlYmNlN2U3YTUyNDllZmVhNjY5MTY3MGY2MyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3c5ab7585ca24ca98abfe21db67da28f",
+      "statement": "Managed identity authenticates callers via LangSmith workspace API keys on the x-api-key header, providing private conversation threads per caller while decoupling durable memory concerns.",
+      "evidence": [
+        {
+          "resource": "repo://identity.py#L3-L10",
+          "version": "repo-lines-v1:sha256:9be67292fba16d12fff9a60b820e954609e18a39b88de50f2e86b8970f915d4c:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWEwODhhN2E3YmQzZjBjMmIxOWQyYjE2Mjc4MmU4YjAzNWUzZGE5NDVjNzQxZWQ2NDNmMzFmMzliNzg1ZDgwYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTdmNjZjZDhiN2Y4MzIzMmE1NzAyYTBlMWEzMjU1ZDVjMjFmODVlNjliYjJkMjU4OWJmMzNmMjFjZDg4Mzg3YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjIsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDg2YWUzMWE1YmI2MDMxZTk3YmUxOWYyNmJkNzE1YTRiYjE5ODM4MzY3NDYzOTBjZWIyNWNhMDYyMmQ5MmExZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_708e81ca442c472398200b72b1272af7",
+      "statement": "Thread sandboxing provides containerized execution scoped to conversation threads, reuses sandboxes across turns, caps command execution at 600 seconds, and reclaims idle sandboxes after 600 seconds.",
+      "evidence": [
+        {
+          "resource": "repo://sandbox/__init__.py#L9-L16",
+          "version": "repo-lines-v1:sha256:0312681e42f0faa05d8c3be579835e82447dc324159a1e736a54917a23417e84:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWVlMWRhY2UyNzI4ZjVlNDcyOGFjYmVmYTI4NjNkODQ2MWI4OTRiODk1ZDFiMGY5ZDliNWUxZDFjYTAxMzIxNCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmFmYmEwNTI3YzM5NTNjNGI2ZTBlNWI1NzM5YmE4MzYxMmY4MDUzYmNkYzk0NjY3MzAxOTNjZDFkNTkwYjQwOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzllM2QzOGI2N2IyN2Y5ZmUxZDA5YzI2ZTQ1YmNiMjU0YzI0NjczNTA3ODEwYzkwOGZhZmFkODc1NDgyYzQzYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4cb28081905843569e450cc1f57d7aa7",
+      "statement": "Managed sandboxing can be completely disabled for the deployment by removing the sandbox/ directory.",
+      "evidence": [
+        {
+          "resource": "repo://sandbox/__init__.py#L3-L4",
+          "version": "repo-lines-v1:sha256:2a108b00eed7a183bbc110ee66194a760e82c0f2415c6edfb03fa4974c4d4a65:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjUyOTJhNzEyMjRjZjZmN2Y4MGNhZGVlNWJkZGUxNWViN2I5NzY2ZjE2ZDM2MTgwYzJjYTIzNjY3NTQ5YjYwMyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMTBhM2U0YTI1NjFkN2EwM2VlZTJlNzhjYzk4OTcwNGQzYTMyMWYxNTBlMTNjZmRkZWQyZmJmMDIwYTk0OGQ2OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjIsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDhjMWUwMzI2NjIwYWU2NTEyYmRhOGNkYmNjODE5YTNmZmUwODE0MzcyZmE5Nzk4MDY4ZTg4MzUyZGEwMjAwNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzIzYjU3ZjIzZDZhNWM5NzJhMTRhMDYyN2EwMGYzNGZiZmYyMDkyYWNjMjVhYTU3OGUwZTdiMjA1MmQ1MjZkYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_48e7896b3c594cb28cdfdfb26b391dfa",
+      "statement": "The automated schedule executes the agent every weekday at 08:00 UTC using cron pattern '0 8 * * 1-5' in timezone 'Etc/GMT' with a fixed prompt to retrieve current EURUSD retail sentiment.",
+      "evidence": [
+        {
+          "resource": "repo://schedules/daily_sentiment_digest.py#L5-L9",
+          "version": "repo-lines-v1:sha256:2b21f41ce0474c2e640a3ad8f1e013d0b602762c40a12e46f518127648ffd387:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODU4N2M2NTIxYjUwYmQ1OTJiZjJmMWZhYzQ1MmRlMmNkYmM5YjFmYWY0NDQ5YmQyMjZhOTUzZWRmNzdiMTA0NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmFmYmEwNTI3YzM5NTNjNGI2ZTBlNWI1NzM5YmE4MzYxMmY4MDUzYmNkYzk0NjY3MzAxOTNjZDFkNTkwYjQwOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzg2NWEyZWIwNjZlMGIwN2Y2OTY4MmE3M2NmNTE1NjRiMzY1ZWEwNjFmN2Y0M2Q4MmVkY2E4NDYyZTMzODUyNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_232a79844d6a43a48d96a61215f9ae45",
+      "statement": "The Scrapling MCP connector loads 13 allowlisted tools with a 'scrapling__' prefix at startup and causes agent initialization to fail if the remote HTTP MCP server is unreachable.",
+      "evidence": [
+        {
+          "resource": "repo://connectors/scrapling.py#L18-L50",
+          "version": "repo-lines-v1:sha256:ccd428090e4b8a3eaeac5302371c380c9221635b5ddbb1f8bc06f87d1cb45a8e:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdiZGVkOTI2NWE3YjE1ZDNlYjJmZTE2MTc4NjE1ZTdlMmIwNDFlMjFlMzAwMzg2YjEzMzFkOTg2NGMzODQwY2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhZmJhMDUyN2MzOTUzYzRiNmUwZTViNTczOWJhODM2MTJmODA1M2JjZGM5NDY2NzMwMTkzY2QxZDU5MGI0MDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg4NmIzYmQ5MzJhZmIyYTY3MzdlYzdiNjljZjA2ZDJlNmIwZjM3MzgxZjljYTBiYzk2M2MwMWYzZWI2MWJhNzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_acc39345a11b4f2ba286a36d1c408f4b",
+      "statement": "Connector contract tests verify that endpoint URLs, bearer token headers, tool allowlists, and error options match environment configurations without fabricating credentials in default local development.",
+      "evidence": [
+        {
+          "resource": "repo://tests/test_scrapling_connector.py#L30-L59",
+          "version": "repo-lines-v1:sha256:61fdcfdeefbddb4b909c44632146b8b463d690260a976795f08019e2f7eef50f:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1MDE1ZTRlNGQxNjkzY2RmZTEzZmVmMGNkNTNjNWQyZmU1YmUyYWU3ZGM0ZDI3ZDg0ZDYwZmZhOWNmNTZmZjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkwY2NlMWQxYjU3M2E2MzNiM2E1Y2UxNGQzYWUzYjUyZDkyYWFmZTI4MzRmNTUwZGI2NjNjYTcwNGRjYWMxNDAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc5MTRlMDRhMWQzNGE0MGJkYjJhMjlkMzYzZGRiNzk3ZWVlYjczOGUzMzBmMTk4ZWZjM2MxM2NhZjRkMjRjZDIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.4.3",
+    "at": "2026-08-29T07:11:00.657Z"
+  }
+}

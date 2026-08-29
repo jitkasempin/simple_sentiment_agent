@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:a20166620f4638fc9a8391d1b50656d26d872845fdb02c9b5263d0a1cf4a59bf",
+  "claims": [
+    {
+      "id": "claim_fb56d653093f48ebbdce75b79ec214d7",
+      "statement": "The Forex Sentiment Agent is built with managed-deepagents 0.5.3, using google_genai:gemini-3.5-flash as its primary model and registering the get_eurusd_sentiment custom tool.",
+      "evidence": [
+        {
+          "resource": "repo://agent.py#L6-L10",
+          "version": "repo-lines-v1:sha256:8c8bdcaf8aa44bc66abbe411f41da57a3aed618901a89218e7b942aa946949fe:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjg0ODA4OGE4OGY1Y2UxNmZmYTYzYzk5ZjA4N2M1NGI5YTk0YTNiNjQ3NDQ4Njk2NTI1MGNiOGQyMTBjNzI4ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmFmYmEwNTI3YzM5NTNjNGI2ZTBlNWI1NzM5YmE4MzYxMmY4MDUzYmNkYzk0NjY3MzAxOTNjZDFkNTkwYjQwOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYWNmN2NlOWM4NjczYjI2ZTI2M2ZhM2JlNGZlODdhYTI5NjIzNTgyNDJjYWEwODRjZjRmNDBkNjQ5OWI4NDBhYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        },
+        {
+          "resource": "repo://pyproject.toml#L6-L11",
+          "version": "repo-lines-v1:sha256:5fa3b24cee6e01f89670aa85e1ccf1e49c2d94fd7e28bd3e81d19d3ff44c30dc:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYWQ5NWY1ZTllZGUwMTgxNjA0M2MwNzk3YWNlOGRhMmFjNGU5OWE4YTZhNjEwZmE5ODU3MGVmMzRiOTM1NjEwOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZjk0MTZlMDlmNzhiYTMxNmMwMzI1NjgyMTNiODU1ZWU3NTZlNDE1NjVkOTE4ZjA5NTE5YzgxZmQ2MjBmNDA2MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGU1YjdlOGQ5MDNiMGUyOTVjODVmMmFjMThiN2Y3ZjE2MmQyOTU4OGZjMWVmZTY1MWFmYTA2YzI1ZTIzYWU0NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYjg0Yjg2YjYyMTI4YjZiYmQ0YTUyZDRkMzg2NjNhNmY3OTc1YzAwM2Y3YWZlNTc3MTAwNDc1OWY1OWVhYmZkNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_4aa56912dcde4df28902e43db8f3bd21",
+      "statement": "The system instructions in instructions.md restrict the agent strictly to EURUSD retail sentiment from Myfxbook, prohibit trade recommendations or financial advice, and mandate a concise reporting structure for positioning percentages and metrics.",
+      "evidence": [
+        {
+          "resource": "repo://instructions.md#L1-L26",
+          "version": "repo-lines-v1:sha256:a83148eda18b82fe8cc01eb63d255fea4edfb97232c840a0355d3a91db954079:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4YmNkMjVjNjFkMjdmZTMzNGMxOWYyYjUzMGI1ZDUyYWJmZDYxMWUyMWJmNTJmMmY1NDdjZTFlYzgyMzhiMWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQwNjhlYTEzMTM4ZmY4YzBmOTk3Yjc2ZWVmZmViM2Q5NjI2YWE5NTM2MjAxNGFhNzc3YTFhZjgwYTliODJlZmEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a25a19a2e0524696b45640d4c75421c1",
+      "statement": "The project uses dual Python environment isolation, running the agent with MCP 1.x client adapters in the root environment and the Scrapling MCP server with MCP 2.x in scrapling-server/ to prevent dependency version conflicts.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L32-L35",
+          "version": "repo-lines-v1:sha256:d6d3db0a32383d86fa665611e99199d00e2e320244dad2c6352342d19c44a244:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2I0NTRkMTQ0ZDJhMDk4YmM4MDBlNTgyZTJiNWFiZTAyZTA0Njk3MzIyMDk3NjA0ZGU1YWQ0YTJlYTQxNmQ0ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGEyOWRkZGMzMzhkY2VlMDlmN2NiMjFkN2Q4ODVhYTc3MTViOTA1NGM3MDYyYzgyMGM0MzNlMzRjZTViNjhlOSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNGJhODM1NWI1NDE4NTg0YmI2ZWM0NGI5NTY4ODRjMTYwYjNlMmFkMzI3NzRhMWQwYmExYTM0YTVmOTU4MmM0MiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjA4MWIxYjM0OWI2MmQ3NzFlNTc3NzU2YWEwOTlmN2I3MzRlMGZhMzAxYWQ1ODllM2NlNmEzZGRjNDkxOTM1ZiJ9"
+        },
+        {
+          "resource": "repo://pyproject.toml#L6-L17",
+          "version": "repo-lines-v1:sha256:f5aea112bb5c07fef80415b9dd2e1fa6556871006575ad872debcaeba3f8404e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkOTVmNWU5ZWRlMDE4MTYwNDNjMDc5N2FjZThkYTJhYzRlOTlhOGE2YTYxMGZhOTg1NzBlZjM0YjkzNTYxMDkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY5NDE2ZTA5Zjc4YmEzMTZjMDMyNTY4MjEzYjg1NWVlNzU2ZTQxNTY1ZDkxOGYwOTUxOWM4MWZkNjIwZjQwNjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBlNWI3ZThkOTAzYjBlMjk1Yzg1ZjJhYzE4YjdmN2YxNjJkMjk1ODhmYzFlZmU2NTFhZmEwNmMyNWUyM2FlNDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://scrapling-server/pyproject.toml#L1-L11",
+          "version": "repo-lines-v1:sha256:cd89a4abfd38c8b36c82136e3fc2b0a8d2c48f2e7d4718576a57f6fbc7821366:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwMmE4MWMzODM2ZWRlZjJkMGJhMTFkMjM1M2ZiNmRhYmM3NzcxNTBhN2NhODNlYTBkOWU5YTcwMzEzZmVhYmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImExMjIwOWYwNTYyOGU1ODhjNjU0MWQzOWRjN2M1OGQyNTdiY2E0ZjE2N2E3MGM2NjViNzJjYjQyNjcwM2E2Y2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_efbcbcdbbdd1410d8622f87a8c24b252",
+      "statement": "The Scrapling MCP connector in connectors/scrapling.py connects to a Streamable HTTP endpoint with Bearer token authentication from SCRAPLING_MCP_AUTH_TOKEN and exposes 13 allowlisted tools with the scrapling__ prefix.",
+      "evidence": [
+        {
+          "resource": "repo://connectors/scrapling.py#L9-L50",
+          "version": "repo-lines-v1:sha256:959588fcbfaa1eaae1c727ff2834288053d73a9f020ec78eaeaac2e4bac9e613:eyJzZWxlY3RlZExpbmVDb3VudCI6NDIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNjNTMzNGFiNjU4NmM2YWUwNzQ2MWJjMTFmNDgwNmUzYmQyMjVlMWU1MjE0Y2U4ZGJkOGYwN2IzNGU2YTdkNmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhZmJhMDUyN2MzOTUzYzRiNmUwZTViNTczOWJhODM2MTJmODA1M2JjZGM5NDY2NzMwMTkzY2QxZDU5MGI0MDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjcxNzE2ODhlYjRiNTk2NDNhMmQyNjRhNDYyNTA2OGJmYTAwNjdkNTEzZmViZGVmNDQwN2E4MDlhNmM5MDAxMmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9742cd4a206f44b587dba29086d7daa8",
+      "statement": "The local Scrapling MCP launcher in scripts/start_scrapling_mcp.py requires SCRAPLING_MCP_AUTH_TOKEN in the environment and exits with status 2 if launched without authentication credentials.",
+      "evidence": [
+        {
+          "resource": "repo://scripts/start_scrapling_mcp.py#L46-L50",
+          "version": "repo-lines-v1:sha256:c7c66680f4b6c2faed2a34e44e30fe3ffc418e74136bf9bd2460e5a22e5d729f:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDBmZDUzZmI5MGQ2ODcwNWNjYTlmMDM0MWIxNDliZDY3OTM1YTQ2NjY2OWU2OTMxZGRmYjM0MjEyNWUyYjI0OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTkwOWE1M2E2MThkMDI4ZTFkMzAwMGMwYTdhYmNlZWNiZTVmYjM3ZjRlNTExZWZlNDY2NDNmYWQ2ZTY2ODcyZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDZiY2NkMTFmYWI1MTcyODI1ZDQ5NzBjNDIxY2UwMjlhZjUwZDQ4MDNjNTI5Y2I3MDdkMDBjY2UzMDM3ODc4ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTVmMzUwZjFhZWJlMDgxMzM0NGE2MWExODRhMDI2NTNlNTlhZWMxNWMyODBhNDU0MGE2YjFjNmM2MDEyM2VkNyJ9"
+        },
+        {
+          "resource": "repo://tests/test_scrapling_launcher.py#L14-L30",
+          "version": "repo-lines-v1:sha256:16835d1d8bf7ebb20b2da36f601d84a1bd7ac2a3060d4edef428f14e79b24fb1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkYjEyNTEwZjBjOWUwMWU2NDA5MWI1ODU0NTRjMDU4ZmNmNmUyZWViNzQ1MjVjZDQ1OGViMjhiYTlmZDdiZWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRlNDQ0OTZlMTgxZjU3MDk1YjMwNGFkYzhmNmZiMzUxM2U0MjQ0NDdhZWUzYTg0YTMzZDZkNTY1NGQ5MWQ4YTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNhN2I3MmNiM2RmYTIyZmZiNmIxYTdkMTRhNzZhY2Y2ZGM0ZjhkODE0MjAyNjg3NjZjYTg4ZWE0ZmFmNjg0NzUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_09cbe336a4654a39949f83f2adbbdfb8",
+      "statement": "The Myfxbook sentiment provider in tools/providers/myfxbook.py executes an authenticated HTTP session lifecycle to retrieve community outlook data, normalizes long and short percentages for EURUSD, and calculates score as (long_pct - short_pct) / 100.",
+      "evidence": [
+        {
+          "resource": "repo://tools/providers/myfxbook.py#L28-L80",
+          "version": "repo-lines-v1:sha256:eb47f124e44c4a3dbf1897e604aa58458baecbb88afdee6f26aceae056ef7f68:eyJzZWxlY3RlZExpbmVDb3VudCI6NTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyMjZiOWVlOTVlMmIyNjFmY2I0ZTc2YTkwMGRhZTVlNGQ4ODU4ZWZjMjRmZjRjMjkxMDQyZjk0YjQ3YzUwZGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkZDI0NDU4MmI2ZmIwM2QyM2I4NDE1YWJlY2QzNDZiMGM5ZjQ2NmI2Zjc1MmIwNjgxODljZTdlOWEyZGMzNTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNiMTg0NGZhZDI3Nzc4N2MzZjhkZjViMzQxZWNmNzIyM2Y1NTQ5Yzg0ZjI3MmUxOTdjYjE0MTI2ZjAyYzc3NjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d9cdcac0eb49483cbe0f87a895f2ed5b",
+      "statement": "Caller authentication is configured in identity.py using LangSmith API keys (auth.langsmith_api_key()), establishing per-caller thread isolation while preserving MDA authorization hooks.",
+      "evidence": [
+        {
+          "resource": "repo://identity.py#L3-L10",
+          "version": "repo-lines-v1:sha256:9be67292fba16d12fff9a60b820e954609e18a39b88de50f2e86b8970f915d4c:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZWEwODhhN2E3YmQzZjBjMmIxOWQyYjE2Mjc4MmU4YjAzNWUzZGE5NDVjNzQxZWQ2NDNmMzFmMzliNzg1ZDgwYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTdmNjZjZDhiN2Y4MzIzMmE1NzAyYTBlMWEzMjU1ZDVjMjFmODVlNjliYjJkMjU4OWJmMzNmMjFjZDg4Mzg3YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjIsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDg2YWUzMWE1YmI2MDMxZTk3YmUxOWYyNmJkNzE1YTRiYjE5ODM4MzY3NDYzOTBjZWIyNWNhMDYyMmQ5MmExZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_360d20d4012b42d89aaa35dad55af001",
+      "statement": "The runtime configures a thread-scoped sandbox in sandbox/__init__.py with a 600-second idle TTL and 600-second execution timeout, and schedules an automated weekday sentiment digest cron in schedules/daily_sentiment_digest.py at 08:00 Etc/GMT.",
+      "evidence": [
+        {
+          "resource": "repo://sandbox/__init__.py#L7-L16",
+          "version": "repo-lines-v1:sha256:06535434eec4a28779ad77f106d94c919c7e6aadfb6ffb37a125823c2564bcd9:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMyNjBlOTEwNDU2ODQxZjA5NGI2YjljNDk3ZGQ1ODNjMmNmNTE4NzRmN2E1MWJiNjEwNmQ3MGMyYWEwNWM3NmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhZmJhMDUyN2MzOTUzYzRiNmUwZTViNTczOWJhODM2MTJmODA1M2JjZGM5NDY2NzMwMTkzY2QxZDU5MGI0MDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdkYmU4MGNmMGYyOTQ0ZGQzYjkxZTFiNmU0OGE0ZGMxYmY5ZDJhODlkYjIwN2VjZGEwZDAzODVjZTdlMTdlYTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://schedules/daily_sentiment_digest.py#L5-L9",
+          "version": "repo-lines-v1:sha256:2b21f41ce0474c2e640a3ad8f1e013d0b602762c40a12e46f518127648ffd387:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODU4N2M2NTIxYjUwYmQ1OTJiZjJmMWZhYzQ1MmRlMmNkYmM5YjFmYWY0NDQ5YmQyMjZhOTUzZWRmNzdiMTA0NyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmFmYmEwNTI3YzM5NTNjNGI2ZTBlNWI1NzM5YmE4MzYxMmY4MDUzYmNkYzk0NjY3MzAxOTNjZDFkNTkwYjQwOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzg2NWEyZWIwNjZlMGIwN2Y2OTY4MmE3M2NmNTE1NjRiMzY1ZWEwNjFmN2Y0M2Q4MmVkY2E4NDYyZTMzODUyNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c3908ade40b04335b08972c8712ff8ed",
+      "statement": "The test suite combines static connector contract tests, launcher security validation, and an opt-in live test suite (enabled via RUN_SCRAPLING_MCP_LIVE=1) that starts the authenticated MCP server and executes live requests.",
+      "evidence": [
+        {
+          "resource": "repo://tests/test_scrapling_connector.py#L30-L59",
+          "version": "repo-lines-v1:sha256:61fdcfdeefbddb4b909c44632146b8b463d690260a976795f08019e2f7eef50f:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1MDE1ZTRlNGQxNjkzY2RmZTEzZmVmMGNkNTNjNWQyZmU1YmUyYWU3ZGM0ZDI3ZDg0ZDYwZmZhOWNmNTZmZjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkwY2NlMWQxYjU3M2E2MzNiM2E1Y2UxNGQzYWUzYjUyZDkyYWFmZTI4MzRmNTUwZGI2NjNjYTcwNGRjYWMxNDAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc5MTRlMDRhMWQzNGE0MGJkYjJhMjlkMzYzZGRiNzk3ZWVlYjczOGUzMzBmMTk4ZWZjM2MxM2NhZjRkMjRjZDIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://tests/test_scrapling_launcher.py#L14-L30",
+          "version": "repo-lines-v1:sha256:16835d1d8bf7ebb20b2da36f601d84a1bd7ac2a3060d4edef428f14e79b24fb1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkYjEyNTEwZjBjOWUwMWU2NDA5MWI1ODU0NTRjMDU4ZmNmNmUyZWViNzQ1MjVjZDQ1OGViMjhiYTlmZDdiZWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRlNDQ0OTZlMTgxZjU3MDk1YjMwNGFkYzhmNmZiMzUxM2U0MjQ0NDdhZWUzYTg0YTMzZDZkNTY1NGQ5MWQ4YTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNhN2I3MmNiM2RmYTIyZmZiNmIxYTdkMTRhNzZhY2Y2ZGM0ZjhkODE0MjAyNjg3NjZjYTg4ZWE0ZmFmNjg0NzUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://tests/test_scrapling_mcp_live.py#L34-L37",
+          "version": "repo-lines-v1:sha256:6f9a8f288bd87fcf16c1398c6794205fa1fdc2343474e1ca27f258ed2bb94b8a:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDBhYWNmNTkzMDg0MDMxNjhkM2U2ZTMyNDllZDVhYTJmNzNkNmRhMTYzNGM5ZGJkNWM2YjkyMDk1YjE1ZDk4OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmFmYmEwNTI3YzM5NTNjNGI2ZTBlNWI1NzM5YmE4MzYxMmY4MDUzYmNkYzk0NjY3MzAxOTNjZDFkNTkwYjQwOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjJkNzhjZTNkMWM4YzIzMjUzNTQ5ZGVmMTUwYjIyMzFjMTM2Y2E2Y2U4ZTg4OWQ4NDJmYjE4YWU5NTYzY2QzNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTYyMWY3MjcyMzkzYjEyNTE2ZGI3MzYyZjBmOTFmYTI1MzNmYjBlODg0MWI0MWUxZTliZmU2OWY4MzhlYzc4NiJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.4.3",
+    "at": "2026-08-29T07:11:00.657Z"
+  }
+}

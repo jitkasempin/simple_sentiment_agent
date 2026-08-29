@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:be48b72c6116a0e2b7fb6f785d5d5cd4bdf67d384c36d0f12ce21cfa6f0a6cac",
+  "claims": [
+    {
+      "id": "claim_af7114fc740e45e289cddec74b6a93ba",
+      "statement": "tests/test_scrapling_connector.py uses sys.modules.pop(\"connectors.scrapling\", None) and importlib.import_module in _load_connector_module() to clear cached module state and force re-evaluation of environment variables upon connector import.",
+      "evidence": [
+        {
+          "resource": "repo://tests/test_scrapling_connector.py#L25-L27",
+          "version": "repo-lines-v1:sha256:aa980cea0ef5344ff5ded1a8e9d486d2d82ca7a82150a16cd774b29d97b9abd5:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTQ1MzRkNmQ2YWJhNWY4NDVjMzBkMGNiNjA4ZjU2NmYyMTE2ZjE4NWUyYzE1ZWRmNzFhZTA2MzlkODg0YWQ5MCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNzY4MjdjMzk1NzlhOGQ2MGFjNGQ2NDFmMWFiMjU0MGY4NGVmYjFlZjRhOTgyZDE5MjQ0YThiM2I5YjlhMmY0MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDlmOTMwODNjMTk3MTIxYjk4MjcwMGJhOGFmYWJkMTcyMmNmMWQzZTc0MDQ1MDllODBlZmEyNzI0N2Y2MmYwNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzRhNWU0MzcxZDUzMjNkNzMwMGRiMzVmZDJhNmI5NDBlZDAwMDM1NTgwNDIyNDljMjQyZjE3YjkxNjFhMGQ0ZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3067c1c9c27f4a37926be83f1c5f77d1",
+      "statement": "test_connector_uses_remote_http_server_and_auth_from_environment asserts that setting SCRAPLING_MCP_URL and SCRAPLING_MCP_AUTH_TOKEN generates an HTTP transport configuration with a Bearer token Authorization header, a 120.0s tool timeout, tool name prefixing, error throwing on load failure, standard content block formatting, and an explicit set of 13 allowlisted tools.",
+      "evidence": [
+        {
+          "resource": "repo://connectors/scrapling.py#L18-L50",
+          "version": "repo-lines-v1:sha256:ccd428090e4b8a3eaeac5302371c380c9221635b5ddbb1f8bc06f87d1cb45a8e:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdiZGVkOTI2NWE3YjE1ZDNlYjJmZTE2MTc4NjE1ZTdlMmIwNDFlMjFlMzAwMzg2YjEzMzFkOTg2NGMzODQwY2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhZmJhMDUyN2MzOTUzYzRiNmUwZTViNTczOWJhODM2MTJmODA1M2JjZGM5NDY2NzMwMTkzY2QxZDU5MGI0MDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg4NmIzYmQ5MzJhZmIyYTY3MzdlYzdiNjljZjA2ZDJlNmIwZjM3MzgxZjljYTBiYzk2M2MwMWYzZWI2MWJhNzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://tests/test_scrapling_connector.py#L30-L48",
+          "version": "repo-lines-v1:sha256:c3a408e289efa8688b6cf21d329672d86795dcb2ea3a6b8aa7190994168d9195:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1MDE1ZTRlNGQxNjkzY2RmZTEzZmVmMGNkNTNjNWQyZmU1YmUyYWU3ZGM0ZDI3ZDg0ZDYwZmZhOWNmNTZmZjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc5MTRlMDRhMWQzNGE0MGJkYjJhMjlkMzYzZGRiNzk3ZWVlYjczOGUzMzBmMTk4ZWZjM2MxM2NhZjRkMjRjZDIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk5ZDE0MTA1YzdiNjAyNDY2N2RlODFjNmMxMmIzNjNkY2MxNmQ1YjM5YThmY2ZmYmI0YWVmNDk0NGVlNmJjMDUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c5bb913b796f4637be14bb76e8e23b63",
+      "statement": "test_connector_defaults_to_local_server_without_inventing_credentials verifies that omitting SCRAPLING_MCP_URL and SCRAPLING_MCP_AUTH_TOKEN sets the connector target URL to http://127.0.0.1:8000/mcp and excludes authentication headers from the server configuration.",
+      "evidence": [
+        {
+          "resource": "repo://connectors/scrapling.py#L9-L43",
+          "version": "repo-lines-v1:sha256:f577c4d56b21db383123b7a3d1821d69b711f87297d6b6abbf63153ec313b401:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNjNTMzNGFiNjU4NmM2YWUwNzQ2MWJjMTFmNDgwNmUzYmQyMjVlMWU1MjE0Y2U4ZGJkOGYwN2IzNGU2YTdkNmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjcxNzE2ODhlYjRiNTk2NDNhMmQyNjRhNDYyNTA2OGJmYTAwNjdkNTEzZmViZGVmNDQwN2E4MDlhNmM5MDAxMmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVkYTM0YjJiZTkwNDFkMmViYTI4M2ZlZmU5NmM0ODY2MDhjNjAyMjYwMmNhODNlYzIzYjY1NTMwZTkyOWRmMWMifQ"
+        },
+        {
+          "resource": "repo://tests/test_scrapling_connector.py#L50-L59",
+          "version": "repo-lines-v1:sha256:2ca5f9abc14a4f6ccf6c1a6de0a9dac8d079c65e995466dfd62dace04795cf37:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNkNWUyY2E4OWFkYzQ2N2FhNWFhYmQ2NTk3ZjcyZTQ2M2Y2MTQzYTA3NWQyODhiMjJkZGM5YzQxZjJkMzRiYTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkwY2NlMWQxYjU3M2E2MzNiM2E1Y2UxNGQzYWUzYjUyZDkyYWFmZTI4MzRmNTUwZGI2NjNjYTcwNGRjYWMxNDAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRiMDgxNWQ1MTY3ZmYxMTRkMmQ2ZTgzYzIwMmQyZDc1MTFmNGQ4OWUyZjBmMWYxOGFjMzg1OGNkZWQwOTc2ZmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_38031057a09448d187846326ffeab362",
+      "statement": "test_launcher_refuses_to_start_without_authentication_token verifies that scripts/start_scrapling_mcp.py exits with status code 2 and outputs SCRAPLING_MCP_AUTH_TOKEN is required when run without SCRAPLING_MCP_AUTH_TOKEN set in the environment.",
+      "evidence": [
+        {
+          "resource": "repo://scripts/start_scrapling_mcp.py#L46-L50",
+          "version": "repo-lines-v1:sha256:c7c66680f4b6c2faed2a34e44e30fe3ffc418e74136bf9bd2460e5a22e5d729f:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDBmZDUzZmI5MGQ2ODcwNWNjYTlmMDM0MWIxNDliZDY3OTM1YTQ2NjY2OWU2OTMxZGRmYjM0MjEyNWUyYjI0OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTkwOWE1M2E2MThkMDI4ZTFkMzAwMGMwYTdhYmNlZWNiZTVmYjM3ZjRlNTExZWZlNDY2NDNmYWQ2ZTY2ODcyZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDZiY2NkMTFmYWI1MTcyODI1ZDQ5NzBjNDIxY2UwMjlhZjUwZDQ4MDNjNTI5Y2I3MDdkMDBjY2UzMDM3ODc4ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTVmMzUwZjFhZWJlMDgxMzM0NGE2MWExODRhMDI2NTNlNTlhZWMxNWMyODBhNDU0MGE2YjFjNmM2MDEyM2VkNyJ9"
+        },
+        {
+          "resource": "repo://tests/test_scrapling_launcher.py#L14-L30",
+          "version": "repo-lines-v1:sha256:16835d1d8bf7ebb20b2da36f601d84a1bd7ac2a3060d4edef428f14e79b24fb1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkYjEyNTEwZjBjOWUwMWU2NDA5MWI1ODU0NTRjMDU4ZmNmNmUyZWViNzQ1MjVjZDQ1OGViMjhiYTlmZDdiZWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRlNDQ0OTZlMTgxZjU3MDk1YjMwNGFkYzhmNmZiMzUxM2U0MjQ0NDdhZWUzYTg0YTMzZDZkNTY1NGQ5MWQ4YTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNhN2I3MmNiM2RmYTIyZmZiNmIxYTdkMTRhNzZhY2Y2ZGM0ZjhkODE0MjAyNjg3NjZjYTg4ZWE0ZmFmNjg0NzUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c62ac57cebe24c3cb84d1602681216a5",
+      "statement": "tests/test_scrapling_mcp_live.py uses pytest.mark.skipif to skip live end-to-end integration tests by default unless RUN_SCRAPLING_MCP_LIVE=1 is set in the environment.",
+      "evidence": [
+        {
+          "resource": "repo://tests/test_scrapling_mcp_live.py#L34-L37",
+          "version": "repo-lines-v1:sha256:6f9a8f288bd87fcf16c1398c6794205fa1fdc2343474e1ca27f258ed2bb94b8a:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDBhYWNmNTkzMDg0MDMxNjhkM2U2ZTMyNDllZDVhYTJmNzNkNmRhMTYzNGM5ZGJkNWM2YjkyMDk1YjE1ZDk4OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZmFmYmEwNTI3YzM5NTNjNGI2ZTBlNWI1NzM5YmE4MzYxMmY4MDUzYmNkYzk0NjY3MzAxOTNjZDFkNTkwYjQwOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjJkNzhjZTNkMWM4YzIzMjUzNTQ5ZGVmMTUwYjIyMzFjMTM2Y2E2Y2U4ZTg4OWQ4NDJmYjE4YWU5NTYzY2QzNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMTYyMWY3MjcyMzkzYjEyNTE2ZGI3MzYyZjBmOTFmYTI1MzNmYjBlODg0MWI0MWUxZTliZmU2OWY4MzhlYzc4NiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_f56497cd60854a56aacdc0c004ebd0d0",
+      "statement": "test_mda_discovers_all_tools_and_scrapes_a_real_page dynamically allocates a local free port using socket binding, launches scripts/start_scrapling_mcp.py as a subprocess, and polls listener readiness with a 30-second timeout in _wait_for_listener().",
+      "evidence": [
+        {
+          "resource": "repo://tests/test_scrapling_mcp_live.py#L40-L58",
+          "version": "repo-lines-v1:sha256:51efacbdcfc9d529dc3b05f0ed4b5138e57397072a669e93c8b72525a6cdab38:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE0MWIyMWI1MDNlNzRiODhlMmY5NTliZjU1M2QxY2Q2NTlkMDkwZmE5ZjA4M2U1ODdjOWYwNTllMGRmNWE5N2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE5OGIwNjNkOWI0N2U2NTM3OTYyNTU3MmNjZTE5NzY2OWQ1NzY3ZTEyYzE4YmUwNzU2NTJiOGNkOTgxY2U4ZDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYyMzc2NTZmNDlkMDgzMGEyODU5YjNhNDJhY2E4NTU1NjA0YTJmNWRmZTEzMTI5OTU4MDRhYjk4MTMxNWYxMGUifQ"
+        },
+        {
+          "resource": "repo://tests/test_scrapling_mcp_live.py#L62-L87",
+          "version": "repo-lines-v1:sha256:358c24a53c990023436d2cb972530398c348d2a3f7e86eebeb53b90908ce3d84:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhOWQ1MTRhZTcxNWI0NjVjNjViMWJhOTg1MzIwOThmMTVkYTZhNDZkMDUzZDM3ZDQ4MTRlYjE5NTc2Y2M5YzciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjczNmU3MTczOTJkNzAwZDk1NDE5NGQ5N2FiYTI1ZGUwN2U1N2Q5YTE4NjczZmM1YTJhZjFjOGJlNjg5MjA1NjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyMzc2NTZmNDlkMDgzMGEyODU5YjNhNDJhY2E4NTU1NjA0YTJmNWRmZTEzMTI5OTU4MDRhYjk4MTMxNWYxMGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBkZGUzNjZiMTU2YjgyMGVlZDA0ZDA2NzY0YTE2NWE4ZTM3OTY5NWM5Yjc1OWFmZWUxMjU0Yjk2MDdiOTBhZjEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_62465f0a0e604409b8878540178824ce",
+      "statement": "test_mda_discovers_all_tools_and_scrapes_a_real_page sends an unauthenticated HTTP POST JSON-RPC request to the running server endpoint and asserts a 401 Unauthorized status code before testing authenticated tool discovery.",
+      "evidence": [
+        {
+          "resource": "repo://tests/test_scrapling_mcp_live.py#L88-L100",
+          "version": "repo-lines-v1:sha256:675145ad66d27c0fe7a6a7d926e4996ff1489f5b62ac72f3ae3a0ca2e59447eb:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1MjFmMGY4ZGE3ODliOGI4M2IwZDhlODQyYmI4Zjg1NTljMTM5NjBiMzU3NzkyNjg1YzM5NDZiMTQ5N2M3MWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkzZjgzNDM5N2U1MGVhNjFmMGI4NzM1YTQ0MmQ2ZjQxZjQyMzk3NmM0MmYxNTc3ZWQxYmE0MDM2NTk2ZTg2NzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFiNWZhOWNhOGM1MDAxY2IxYmM2ZDJjOWNmNDEzYmJlYjQzMzI2YzhhYzkyZmVkYWViNjc5MThkYzE1ZWRhZDAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_760afed876e84b86a47fdcdffa3f9e3e",
+      "statement": "The live integration test verifies that the connector discovers all 13 tools with the scrapling__ prefix and successfully executes both static HTTP (scrapling__make_request) and headless browser (scrapling__fetch) extractions against https://example.com.",
+      "evidence": [
+        {
+          "resource": "repo://tests/test_scrapling_mcp_live.py#L107-L131",
+          "version": "repo-lines-v1:sha256:0253c06977330f4119fee38f19e7327061e86788cbda9710c04fde8644b93f81:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkyMDg5Y2FmOTVkYjU3MmMyM2NmYmVjNjU4MTFhM2NjOGQwNDhiNTc1NjA4MGY2YzZjOWVjYmYyYTRiNTNhZjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlmYmZmZWY1ZWNjOWNkODRhOTdlNWVmNzFiODMzOGExZWU0OWQ5NDRkMTAxYjU4N2Q5MTUwODY3N2QzMDkwZDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI2MjdjODU3MGU5NTljZmIzODg2MmE0MDA2Yzk1MWY4ZjY4ZWFlODVhOTc5YWFkMTkwMmU0MTcwMzhiM2FiZGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM1MDUwNTgxMWNhMDI5OWE5OTczMDEwMjhiMjMwMDlmYjA1MmYwMDZiYjY1ODkxNTdmMzQxYjU0NjMzYWEwMDQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_62a8aef2b12645aea073b2c43827fdc1",
+      "statement": "During test teardown, test_mda_discovers_all_tools_and_scrapes_a_real_page clears internal connector tool caches via clear_managed_mcp_tools_cache_for_tests and terminates the background server subprocess using SIGTERM with a SIGKILL fallback.",
+      "evidence": [
+        {
+          "resource": "repo://tests/test_scrapling_mcp_live.py#L132-L144",
+          "version": "repo-lines-v1:sha256:fde2e4ff33edc888d2d07e8dcee6161e947ae18b9d0f3480da588d637b31ea7b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU3MGRhMDMyZmJmZGJkMWI0MjRlODE0YzIxMmFlNTg0ODRlNzZmNTdkYzU2ZGJmZDEzYmY4MDM3MzZkMzI0YjIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM2ODE5NjE2OWQ4MjU4MjViYzQxNDg2YzU4YWE3NGJiMjFiMDRmMzNkOGQzMzczMmY2Y2QxMDdhZTA4MTQwMTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMyNjcyNTEwMzIzZjVjZjYwOTVkMTQ2NGVkNTEzMzBhYzQwYzkxMDQ0MGFiYmI3NDhiYzg5Njg5NTcwMjI1ZjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.4.3",
+    "at": "2026-08-29T07:11:00.657Z"
+  }
+}

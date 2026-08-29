@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:46988380bcfc26b884cac4ce80e8032ea38579fc0df238d5408ae2fcd2a2c15d",
+  "claims": [
+    {
+      "id": "claim_8e76f5d6f4944c258ddff2ff19410c7c",
+      "statement": "ProviderError serves as the root exception class for external sentiment provider retrieval and parsing failures.",
+      "evidence": [
+        {
+          "resource": "repo://tools/providers/base.py#L4-L6",
+          "version": "repo-lines-v1:sha256:7d358f3c1a59525caa279d0600293df4a6650e574b8cab1fe006103f2192ebd8:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzViZGFiMjQ5YjMyNDc0YmJkYmI2NTIzYzMzYWQ2YjQwNmU0MjkwYjE0YzE5Yjk4NmIwN2FkNTI5Yjg4OTY0NSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTQ0NWUxN2FkZWQzMDk3NDVmZmRhMzI5ZmNkNjU4NjJkNTI5NmM0ZWQ3YjBmZWNlYjMzMDQ3NWY2ZTI3NGM2MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzcwYTIzOGQ2MjEwZWIxOGJhNjUyMWI3YTM4YjUxZmQ3YjEwZjE3NjcyYTcyMTgwY2RlZDBmMGY4ZWVmOWZlNSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a5294a06fd6441fe9ce6ee05f31478cc",
+      "statement": "The Myfxbook provider suppresses httpx.Response.raise_for_status() in favor of manual status code checking to prevent credential parameters from leaking into error messages.",
+      "evidence": [
+        {
+          "resource": "repo://tools/providers/myfxbook.py#L14-L18",
+          "version": "repo-lines-v1:sha256:a83ea8e02308384bcd9bdc9267642184d4de8b0736ce5342d90b1dbb195624a8:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjM1NWE3ODQ4NTY2NGRkMDkxMzM2OTUxODMyZTg0ODk1ZmU3NjllZTUxNGZhOGMwOTE5NDRhNjg2NGVhMTdmYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjUyYWI2YjI3NGRkN2FlNjZlMWZjYjk5NTYxODMwZjA0ZmZhZThhYjJjYjVhNmYwOWRlNTg5MWY5OGQ1MzE1YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDljMDYzZDQyODRhMDQ5Y2UzY2VhMzQ2ZDFlN2RhMjI0MDE0YWFkY2Q0ZGExYWMzN2Q1MzJjZjcwY2ZjMjQxMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTExNmJmZmFkNTg3MWM3ZWQ5NGU0NGQ3ZWE4MGY2MGUzNDhmMGU4YjIzZjAzMGY2MTE0MGU3ZjJmMTA3NjEyZiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_ff5a85ebfbfd4b5481ac91c77ff867ad",
+      "statement": "The Myfxbook HTTP client converts non-200 status codes, invalid JSON payloads, and payload API error flags into ProviderError exceptions.",
+      "evidence": [
+        {
+          "resource": "repo://tools/providers/myfxbook.py#L17-L24",
+          "version": "repo-lines-v1:sha256:d903c538a2d6aa6297f848b73545cd492a8dc5351fecfa9c17f2c4440ff81014:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDI4NDM5YWU5N2JiMGEyZGI2MGJhN2E0YTY5NWViNWE0OWQ4MTFiNDJiN2FmMjgwMTg3YTRhOGYwNGJlZGVkNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODJiY2U2OTA4Y2E2OTZkOGQ2MzNjMWEzYzQ2YWRjMTBhMmMwNTIwY2I3ZmE4ZWJlZTVmZjZhMzYzMjA3NGI1OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGJiM2E1NzQyZWRkMGY4NWNhNzhhYjZhOGRhYzE1MDE4MDIxN2Q5OTk3ZGYyMzYyMjlhZDNlOWIyMjkzZjQ5NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2IxODQ0ZmFkMjc3Nzg3YzNmOGRmNWIzNDFlY2Y3MjIzZjU1NDljODRmMjcyZTE5N2NiMTQxMjZmMDJjNzc2OCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_708482dd26ae4f7fb243e366bb84d041",
+      "statement": "The fetch_myfxbook provider executes session logout requests inside a finally block while catching and ignoring any resulting ProviderError.",
+      "evidence": [
+        {
+          "resource": "repo://tools/providers/myfxbook.py#L41-L47",
+          "version": "repo-lines-v1:sha256:22200f8bb394519824c186f17a6f3149091dc216e944b13679645921c844e2bf:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjU2OWNiMDkyODBlZTA3ODE5NDVlNDhkNDA0MWJkMmRmYWFlNjkxYWQyZWFiZjVkM2NiYTA4NDZjNzIxNmNhYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGVlYzUwYzk2NTQ0MWUwZTE1ZDdmMjdkNzkzZDFlODQ2OGNjYzkzNzMxYjk4YmI0MWE5YTBjNjYwNTEwOGM1ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjJkNTdhYjRkMjM3MzZlOTIyYWVmMWZhMTcwNjc2NmEwYTM4N2QyMmFlOTUxN2I4NzcwZDU0YjhlNDAwMjVjMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWJhNGZlMTgzMjEyZjQzNGVhY2QxMDg2ZmJlZDAyMjU3NjQ2YzBhMmU3OWZkMTliZWZlYjM1ZTQwZmI1NmQwNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_eb0dc47304d846ea8c6c256296791db8",
+      "statement": "SentimentObservation defines Pydantic data fields for currency pairs, positioning percentages, normalized sentiment score, timestamps, sample size, decay parameters, and warning metadata.",
+      "evidence": [
+        {
+          "resource": "repo://models.py#L8-L25",
+          "version": "repo-lines-v1:sha256:e3b91ffaf5edff7734d7ecaf4577b26252f809a220e5bb01f93b99cce502265a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwZmE2Y2VhNWNjMTJhOTYxNzBhMjJmYjBjY2JhMjA0YzVhOTJjNDRlNDMwZGMxODJhN2ZkMGI1MDE0NjQ1MjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBiNzM2NDcxZDZhYWE2ZWRhOTZmZjdhMjc5MDcxODFmZjdhM2MzYmZkZDUwMjY0MGViODIwNWE5MjFhZTFhOGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVlYWJlZjFkNTE5ZGM0YzlmNDMwNjFiMGJjNDkzNDE2MWNkMzNhOWJmNmYyZWJiODg5YzgxYThhNjc4ZWU0NjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_03676a1036ae480ca8e504f4d697680a",
+      "statement": "SentimentObservation defaults half_life_seconds to 900, max_age_seconds to 3600, reliability to 0.80, independence_group to myfxbook, source_url to https://www.myfxbook.com/api, and extraction_method to documented_api.",
+      "evidence": [
+        {
+          "resource": "repo://models.py#L19-L24",
+          "version": "repo-lines-v1:sha256:359cb9d887db68695b893006f65b164b46f934e0b97d74641ef805854ed78170:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzc0OGM5NDE0YTdhMzUwYmIxMTQyNjRhZDUzZjVmYWNkNzIyYmY5ZjQ5NmFlM2IwNWU3ZjI2YTU0MjZlYzljOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzYyOGZkYjk0OWQ4OTk1ZmQ0OGEzNDE2Y2EzN2FlNjI4ZjE5OTIwMGNlMzkxYzE1MWMxMmQ0MTBlZjhhZTI0MiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTkzMzM5ODNmYzUyNzY0MzYzYjY1ZjU2YmU5NTM5OWViNzg3MDBlODEyNTlkMmEwYjVlYTRiNzZiODhjMWRmOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjEsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMGI3MzY0NzFkNmFhYTZlZGE5NmZmN2EyNzkwNzE4MWZmN2EzYzNiZmRkNTAyNjQwZWI4MjA1YTkyMWFlMWE4YiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_04aaac704b3046759d548253777c6a8e",
+      "statement": "The Myfxbook sentiment provider resolves target currency pair symbols against provider native symbols and swaps long and short percentages when matching an inverted currency pair.",
+      "evidence": [
+        {
+          "resource": "repo://tools/providers/myfxbook.py#L49-L59",
+          "version": "repo-lines-v1:sha256:8e54ca0c7e5356f523f033b4edd0fdef67957db1c232933d36b5c1a5a931b2ab:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdmZmNlZmI5NDFlMjkzNGY5NzI0MzZkNjc2NDNkZWRmNGM3ZDBkNmUyY2UyNzVkNDc4MDYyMjUzMmRiNGUyMTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwYzFmMTg4ZjE0MmVkN2E4MjQ2ODBiMjA3MTcyYzU1MTliYzYxNGE0OGZkYTdjZjE2N2VkYjhkZGY3OTk1NmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAwNDczMmQ2MzRlMzAyNTE1YWNiYWM4Y2U3NzQxNDJiMDBmNWFhNjlhNjNkZmRhYTRjNDE5NDQwNTkyODU2ZWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJkYWZhYjk2ZmQ5YzExZjI5YzdkMzNjNjUwNTU2MjExNzYxMzM0YjFjNmJhMWM4MzY5YWU0N2YzYTFlOGNhNWMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_fa6a7f7953d64af4912ffc6f0d8fcf98",
+      "statement": "The sentiment score is calculated as (long_pct - short_pct) / 100, producing a normalized sentiment metric bounded between -1.0 and +1.0.",
+      "evidence": [
+        {
+          "resource": "repo://models.py#L13-L13",
+          "version": "repo-lines-v1:sha256:b7d5728c742bd8a50678c7aecdc146f416176978d5273d3735134463aaa7f76c:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjdkNTcyOGM3NDJiZDhhNTA2NzhjN2FlY2RjMTQ2ZjQxNjE3Njk3OGQ1MjczZDM3MzUxMzQ0NjNhYWE3Zjc2YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjdkNTcyOGM3NDJiZDhhNTA2NzhjN2FlY2RjMTQ2ZjQxNjE3Njk3OGQ1MjczZDM3MzUxMzQ0NjNhYWE3Zjc2YyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjBlZDQwODQ0NmExMzYxMTc0NGM5MmEzMGFlOGQ3NGE1NGNhZThhNGY5ODk1ODY1NDgzOWMwMzM1N2Q0MGZhMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDIyYzMxYmNkMzI1YzkwMjcxMThlYjM1NzY1M2MyMWQ0ZGVkMGNmZmQ1YmRmNTMzYjVlYzEzYTdhMzQ2Njc1NyJ9"
+        },
+        {
+          "resource": "repo://tools/providers/myfxbook.py#L66-L66",
+          "version": "repo-lines-v1:sha256:46be324bbbfd621afb48c352df51ce2ca6e6b791748d083b6409b96007a911bf:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDZiZTMyNGJiYmZkNjIxYWZiNDhjMzUyZGY1MWNlMmNhNmU2Yjc5MTc0OGQwODNiNjQwOWI5NjAwN2E5MTFiZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDZiZTMyNGJiYmZkNjIxYWZiNDhjMzUyZGY1MWNlMmNhNmU2Yjc5MTc0OGQwODNiNjQwOWI5NjAwN2E5MTFiZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzI3NzhjMjU0ZWVmMGZmZWE4NmFhNTM1ZWI1NjI5YjdlNzczOTRkYjI5NDJmZDJmMzAxYjZmODkzZDQ2YzQ1NyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDQ4ZmM0MWM1OGI1Yzc3ZWI1YWRlMGQ0YTBkNTBiMTk1YTI1NmMzODNkZjJkNzJlMDY0NzVjMjQzOTllOTk3MiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_20c0b2712a5c46dfba2addc59e340894",
+      "statement": "The get_eurusd_sentiment LangChain tool executes fetch_myfxbook for EURUSD and serializes observation metrics into JSON format while catching ProviderError, KeyError, and general exceptions into structured error JSON payloads.",
+      "evidence": [
+        {
+          "resource": "repo://tools/sentiment.py#L9-L37",
+          "version": "repo-lines-v1:sha256:26b91fbff11f17a6a8ab8f533c0e63f6bcaff8be0a236b1efffd8d079e47a70b:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEzNGU1OWQ3ZWFkY2E4YTkyOWEyNWZhNjBiYjU0ZmY2YjhhZmIwZmFkOTQwOTljZDFjODg5OGRjZDViZTk2OGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBjNzM2YWU2YzM2YTAyZTlmNzE2NmIyYzUzYmRjOGNiYTY3NDQ1YWMzZWQwNjE5YmMyOTc0MDZkYTc3MDFiOWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNiOGY4N2U5ZTIxN2U0NTM0OThjYjQzYjc0M2VmMDI3ZGQ5ZmQ1MjZkYTdhNGZhZTJiYzQzNzFiYzUyMTg5ODgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.4.3",
+    "at": "2026-08-29T07:11:00.657Z"
+  }
+}

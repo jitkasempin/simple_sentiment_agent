@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:27466505263eca4e482cd6e237cf5363e8e6370f59c8222eb31c49af6476ac4d",
+  "claims": [
+    {
+      "id": "claim_a9eab04fe9804938983f194f0297304f",
+      "statement": "get_eurusd_sentiment serves as the LangChain agent tool entrypoint that calls fetch_myfxbook(\"EURUSD\") and formats either a structured multi-line JSON payload or a JSON error response string.",
+      "evidence": [
+        {
+          "resource": "repo://tools/sentiment.py#L9-L37",
+          "version": "repo-lines-v1:sha256:26b91fbff11f17a6a8ab8f533c0e63f6bcaff8be0a236b1efffd8d079e47a70b:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEzNGU1OWQ3ZWFkY2E4YTkyOWEyNWZhNjBiYjU0ZmY2YjhhZmIwZmFkOTQwOTljZDFjODg5OGRjZDViZTk2OGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBjNzM2YWU2YzM2YTAyZTlmNzE2NmIyYzUzYmRjOGNiYTY3NDQ1YWMzZWQwNjE5YmMyOTc0MDZkYTc3MDFiOWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNiOGY4N2U5ZTIxN2U0NTM0OThjYjQzYjc0M2VmMDI3ZGQ5ZmQ1MjZkYTdhNGZhZTJiYzQzNzFiYzUyMTg5ODgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9ab5a01d67e24e6e9a23a9791a0239eb",
+      "statement": "fetch_myfxbook authenticates with the Myfxbook REST API using MYFXBOOK_EMAIL and MYFXBOOK_PASSWORD environment variables to retrieve a URL-unquoted session token via login.json.",
+      "evidence": [
+        {
+          "resource": "repo://tools/providers/myfxbook.py#L28-L40",
+          "version": "repo-lines-v1:sha256:df2435d0e589723ae6f17f9636f2d31eadf85d67aae693db8ba2917e1a38a6e1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyMjZiOWVlOTVlMmIyNjFmY2I0ZTc2YTkwMGRhZTVlNGQ4ODU4ZWZjMjRmZjRjMjkxMDQyZjk0YjQ3YzUwZGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE4ZmJkYjM4Mzg2N2Y3YjgzMGY5NGJlZDBkMTEwNjVkNDg1YjA5YjAzNDc3MWY0OWM5ZTQ2NDcwNmZkNzIyZTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNiMTg0NGZhZDI3Nzc4N2MzZjhkZjViMzQxZWNmNzIyM2Y1NTQ5Yzg0ZjI3MmUxOTdjYjE0MTI2ZjAyYzc3NjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQwNjE2ZDY4MmUxMWZkMGQ0NjQ2M2IxM2Y2ZjdiMzkwMTU1OWFmYjcwMmU2NjBiNGUwZDRiNTFhOWExNzhlMTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e507fac60c264e2097558f2402c042b0",
+      "statement": "Network requests to Myfxbook use an httpx.AsyncClient with a 10-second timeout (5-second connect timeout) and follow_redirects=False, validating status code 200 manually without calling raise_for_status() to prevent secret parameter logging.",
+      "evidence": [
+        {
+          "resource": "repo://tools/providers/myfxbook.py#L14-L18",
+          "version": "repo-lines-v1:sha256:a83ea8e02308384bcd9bdc9267642184d4de8b0736ce5342d90b1dbb195624a8:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMjM1NWE3ODQ4NTY2NGRkMDkxMzM2OTUxODMyZTg0ODk1ZmU3NjllZTUxNGZhOGMwOTE5NDRhNjg2NGVhMTdmYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYjUyYWI2YjI3NGRkN2FlNjZlMWZjYjk5NTYxODMwZjA0ZmZhZThhYjJjYjVhNmYwOWRlNTg5MWY5OGQ1MzE1YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDljMDYzZDQyODRhMDQ5Y2UzY2VhMzQ2ZDFlN2RhMjI0MDE0YWFkY2Q0ZGExYWMzN2Q1MzJjZjcwY2ZjMjQxMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTExNmJmZmFkNTg3MWM3ZWQ5NGU0NGQ3ZWE4MGY2MGUzNDhmMGU4YjIzZjAzMGY2MTE0MGU3ZjJmMTA3NjEyZiJ9"
+        },
+        {
+          "resource": "repo://tools/providers/myfxbook.py#L30-L31",
+          "version": "repo-lines-v1:sha256:fe54ba27f2828cdb059dc5511f62e4a6bbe1088251694b0ec37d3d914cb4149d:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZjI4YjEwYTk4ZjM1Y2M3NjFlODAyYjViYmIwZjZjNDhhZTcyOWIxNDUzMjFkMjhkMTRlMTg1NWFmZjUyZmUyYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDBhNDI5NGIwZTZjMDU1NzdkMTJjMGY3ZjMzNTg3MWJmZDkwMjNmZmI0Zjk2Nzc5MGIzMjZmNzNjZDNjMTlkZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiN2IwMjYxMzRmMTkzNDJhZTNlZGMwYTlkOTU1NWM2OGY5YWM0NmQ0ODgzYzg0NjA4YTIxZTE5NWIyM2ZhMmY4OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzA3NDA5YmY5YjMxNTQ5MGQ5MDEzYzhhMTQyMDQxNDgwOWE5M2FlMGVkZmFhNWMzMzc4NzJkYmNkNmFlZTM5ZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_469b9283983643c7bfc9ed505257e02e",
+      "statement": "fetch_myfxbook requests get-community-outlook.json within a try block and guarantees session cleanup by requesting logout.json inside a finally block, silently suppressing logout ProviderError exceptions.",
+      "evidence": [
+        {
+          "resource": "repo://tools/providers/myfxbook.py#L41-L47",
+          "version": "repo-lines-v1:sha256:22200f8bb394519824c186f17a6f3149091dc216e944b13679645921c844e2bf:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYjU2OWNiMDkyODBlZTA3ODE5NDVlNDhkNDA0MWJkMmRmYWFlNjkxYWQyZWFiZjVkM2NiYTA4NDZjNzIxNmNhYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGVlYzUwYzk2NTQ0MWUwZTE1ZDdmMjdkNzkzZDFlODQ2OGNjYzkzNzMxYjk4YmI0MWE5YTBjNjYwNTEwOGM1ZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjJkNTdhYjRkMjM3MzZlOTIyYWVmMWZhMTcwNjc2NmEwYTM4N2QyMmFlOTUxN2I4NzcwZDU0YjhlNDAwMjVjMiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOWJhNGZlMTgzMjEyZjQzNGVhY2QxMDg2ZmJlZDAyMjU3NjQ2YzBhMmU3OWZkMTliZWZlYjM1ZTQwZmI1NmQwNSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_05e9e4ba14d14e41849b076d9bf0319b",
+      "statement": "Provider output is filtered for matching symbol rows (wanted or inverse), swapped if inverse, and used to calculate normalized sentiment score (long_pct - short_pct) / 100 alongside sample size.",
+      "evidence": [
+        {
+          "resource": "repo://tools/providers/myfxbook.py#L49-L69",
+          "version": "repo-lines-v1:sha256:337362bd792213bdfaa8e84d554ea845222f261ced2866f4bb8591d120904af6:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdmZmNlZmI5NDFlMjkzNGY5NzI0MzZkNjc2NDNkZWRmNGM3ZDBkNmUyY2UyNzVkNDc4MDYyMjUzMmRiNGUyMTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk4MWExM2JkMjVhYjhlZmQ3MWQ0NDU0NzAyZjI2MDg1MjE2YWY2YmE1MTcwY2U5MDlmNjM0Mzc1YWNhMDg5ZGYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAwNDczMmQ2MzRlMzAyNTE1YWNiYWM4Y2U3NzQxNDJiMDBmNWFhNjlhNjNkZmRhYTRjNDE5NDQwNTkyODU2ZWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY5MGZkNmFkMzI3ZGRhMTU1Njc4YjM4MmNjN2I5MTBmMzYyY2Q3YWVlYmZmNjBmMzM2OTk3NjgxNTIwN2I1OTkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1aa224944fa744f6a00f2a20f61ab500",
+      "statement": "Errors during sentiment retrieval—including missing environment variables (KeyError), HTTP status failures, malformed JSON, provider API errors, missing symbol rows (ProviderError), or unhandled exceptions—are captured and formatted into JSON error responses by get_eurusd_sentiment.",
+      "evidence": [
+        {
+          "resource": "repo://tools/providers/myfxbook.py#L17-L24",
+          "version": "repo-lines-v1:sha256:d903c538a2d6aa6297f848b73545cd492a8dc5351fecfa9c17f2c4440ff81014:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNDI4NDM5YWU5N2JiMGEyZGI2MGJhN2E0YTY5NWViNWE0OWQ4MTFiNDJiN2FmMjgwMTg3YTRhOGYwNGJlZGVkNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiODJiY2U2OTA4Y2E2OTZkOGQ2MzNjMWEzYzQ2YWRjMTBhMmMwNTIwY2I3ZmE4ZWJlZTVmZjZhMzYzMjA3NGI1OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMGJiM2E1NzQyZWRkMGY4NWNhNzhhYjZhOGRhYzE1MDE4MDIxN2Q5OTk3ZGYyMzYyMjlhZDNlOWIyMjkzZjQ5NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2IxODQ0ZmFkMjc3Nzg3YzNmOGRmNWIzNDFlY2Y3MjIzZjU1NDljODRmMjcyZTE5N2NiMTQxMjZmMDJjNzc2OCJ9"
+        },
+        {
+          "resource": "repo://tools/providers/myfxbook.py#L52-L53",
+          "version": "repo-lines-v1:sha256:e3f9b796fa49b88548076ecd4936b0f4f7886485a27979e8c8ddbbc7747010c6:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2QxYmQ2ZjVlNGEyZWU0ZjJmNmMwOGMxZmJlNzhmYWQ0NGMwNTM2MzM3YjllMjI4NDFiZjIyY2VkNzJkZDg0ZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNGU3MDk0YmJhZTkwNjQ2NjcyNjI0MGJmZGFkMDY4NDkwOGMxMWRkNDY0MDhlMmUwMjVkM2ZjNmQ2Mjc5YWQ3NSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOGFmN2E0MTQ0ZjRmMzYwZjhhYThiNjdmM2VlMmMxNGYwODBiNWE3Y2FiNzNiNDU5MGZkYjJlYjhlZTU2YzU1ZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYmZmNTcwNWE0NzI2Zjk4OWNlNWJhYmQxZTI1MGY2YTQ4ZTQ0ZjIzNWUyODEwNTkxMzIxNTA4ZDdmZjgzNDg4NiJ9"
+        },
+        {
+          "resource": "repo://tools/sentiment.py#L32-L37",
+          "version": "repo-lines-v1:sha256:127d881d6c93c0c9736d88346aa5ef56df86eac4007e122204218ab7aa146c1b:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMGRhYmY1YmFhNjg2YTE5ZGNlNzVmOWE3MmUwZjgyYjRmYjlkZGVkNzFiMzUxMmYzZjczY2IxN2UxY2FkNzhhNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGM3MzZhZTZjMzZhMDJlOWY3MTY2YjJjNTNiZGM4Y2JhNjc0NDVhYzNlZDA2MTliYzI5NzQwNmRhNzcwMWI5YSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYmE4OTFkMjAwZDViNTZmN2Q2ZTk2ODBlYWM0YzE3NzMwYzlmNjYwYTM3ZWIwYmNlYzM4Zjk0ZTE2MWY2NzBkZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_cce72eece3324b2393f2cce1772c7bf2",
+      "statement": "Retrieved positioning data is instantiated into a SentimentObservation model containing positioning metrics, 900-second half-life, 3600-second max age, and retrieval warnings.",
+      "evidence": [
+        {
+          "resource": "repo://models.py#L8-L25",
+          "version": "repo-lines-v1:sha256:e3b91ffaf5edff7734d7ecaf4577b26252f809a220e5bb01f93b99cce502265a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwZmE2Y2VhNWNjMTJhOTYxNzBhMjJmYjBjY2JhMjA0YzVhOTJjNDRlNDMwZGMxODJhN2ZkMGI1MDE0NjQ1MjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBiNzM2NDcxZDZhYWE2ZWRhOTZmZjdhMjc5MDcxODFmZjdhM2MzYmZkZDUwMjY0MGViODIwNWE5MjFhZTFhOGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVlYWJlZjFkNTE5ZGM0YzlmNDMwNjFiMGJjNDkzNDE2MWNkMzNhOWJmNmYyZWJiODg5YzgxYThhNjc4ZWU0NjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://tools/providers/myfxbook.py#L60-L79",
+          "version": "repo-lines-v1:sha256:e8193632502f97bed27978a5eda10eadc7a3ce3f125b885f4b17c0796c9ca6ce:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA0NzRiYTFiYjE5NWNlNTc2YTFhZGRkNGRkYzIyMDI1NjllMDhmYmM0YzUzOTRjMmQzNzI1ODIxMmU2ZDIwNzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5MDlhNTNhNjE4ZDAyOGUxZDMwMDBjMGE3YWJjZWVjYmU1ZmIzN2Y0ZTUxMWVmZTQ2NjQzZmFkNmU2Njg3MmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ0YjY5NjkyNjdiNTE5NTkzOTEwZDZlNmNlNGJmNjc0Yzk2Nzg3M2Y5ZmQ0MWE2ZWM1MzM3NDk2N2QyZGQyYmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFkZDI0NDU4MmI2ZmIwM2QyM2I4NDE1YWJlY2QzNDZiMGM5ZjQ2NmI2Zjc1MmIwNjgxODljZTdlOWEyZGMzNTAifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.4.3",
+    "at": "2026-08-29T07:11:00.657Z"
+  }
+}
