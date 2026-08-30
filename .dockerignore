@@ -1,0 +1,8 @@
+# Deny everything, then re-include only the three files the image needs. A new
+# secret or credential added to the repo cannot reach the build context by
+# default, which is stronger than maintaining a denylist that goes stale.
+*
+
+!scrapling-server/pyproject.toml
+!scrapling-server/uv.lock
+!scripts/start_scrapling_mcp.py

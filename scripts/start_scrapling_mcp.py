@@ -10,6 +10,12 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 
+def _default_port() -> str:
+    # Cloud Run injects PORT. SCRAPLING_MCP_PORT still wins so a local override
+    # works even inside a container that already has PORT set.
+    return os.environ.get("SCRAPLING_MCP_PORT") or os.environ.get("PORT") or "8000"
+
+
 def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="Start the Scrapling MCP server for local Managed Deep Agents development.",
@@ -22,8 +28,8 @@ def _parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--port",
         type=int,
-        default=os.environ.get("SCRAPLING_MCP_PORT", "8000"),
-        help="listen port (default: SCRAPLING_MCP_PORT or 8000)",
+        default=_default_port(),
+        help="listen port (default: SCRAPLING_MCP_PORT, then PORT, then 8000)",
     )
     parser.add_argument(
         "--allowed-host",
@@ -32,6 +38,37 @@ def _parser() -> argparse.ArgumentParser:
         help="accepted Host header; repeat for multiple public hostnames",
     )
     return parser
+
+
+def allowed_hosts(cli_hosts: list[str], env_value: str | None) -> list[str]:
+    """Merge SCRAPLING_MCP_ALLOWED_HOSTS (CSV) with repeated --allowed-host flags."""
+    # dict keys keep first-seen order and drop duplicates in one pass.
+    ordered: dict[str, None] = {}
+    for host in [*(env_value or "").split(","), *cli_hosts]:
+        stripped = host.strip()
+        if stripped:
+            ordered[stripped] = None
+    return list(ordered)
+
+
+def build_command(executable: str, host: str, port: int, hosts: list[str]) -> list[str]:
+    """The argv that replaces this process. Pure, so tests can assert on it."""
+    command = [
+        executable,
+        "run",
+        "--project",
+        str(PROJECT_ROOT / "scrapling-server"),
+        "--frozen",
+        "scrapling-mcp",
+        "--http",
+        "--host",
+        host,
+        "--port",
+        str(port),
+    ]
+    for allowed_host in hosts:
+        command.extend(["--allowed-host", allowed_host])
+    return command
 
 
 def _uv_binary() -> str | None:
@@ -53,21 +90,12 @@ def main() -> None:
     if executable is None:
         parser.error("uv is required to run the isolated Scrapling server environment")
 
-    command = [
+    command = build_command(
         executable,
-        "run",
-        "--project",
-        str(PROJECT_ROOT / "scrapling-server"),
-        "--frozen",
-        "scrapling-mcp",
-        "--http",
-        "--host",
         args.host,
-        "--port",
-        str(args.port),
-    ]
-    for allowed_host in args.allowed_host:
-        command.extend(["--allowed-host", allowed_host])
+        args.port,
+        allowed_hosts(args.allowed_host, os.environ.get("SCRAPLING_MCP_ALLOWED_HOSTS")),
+    )
 
     # Replace this process so Ctrl-C and termination signals reach the MCP server.
     os.execvpe(executable, command, os.environ.copy())

@@ -8,7 +8,7 @@ from managed_deepagents import connectors
 
 SCRAPLING_MCP_URL = os.environ.get(
     "SCRAPLING_MCP_URL",
-    "http://127.0.0.1:8000/mcp",
+    "https://forex-scrapling-mcp-xo5xnsauva-uc.a.run.app/mcp",
 )
 SCRAPLING_MCP_AUTH_TOKEN = os.environ.get("SCRAPLING_MCP_AUTH_TOKEN")
 

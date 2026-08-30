@@ -1,0 +1,23 @@
+# Build and push the Scrapling MCP image.
+#
+#   gcloud builds submit --config deploy/cloud-run/cloudbuild.scrapling.yaml \
+#     --substitutions=_IMAGE=REGION-docker.pkg.dev/PROJECT/REPO/forex-scrapling-mcp:TAG .
+#
+# _IMAGE is the only substitution. The MCP auth token reaches the service from
+# Secret Manager at deploy time and must never enter a build.
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - --file=scrapling-server/Dockerfile
+      - --tag=${_IMAGE}
+      - .
+
+images:
+  - ${_IMAGE}
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+# Chromium download plus apt dependency installation runs past the 10m default.
+timeout: 1800s

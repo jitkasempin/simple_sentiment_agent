@@ -13,9 +13,9 @@
       }
     },
     "recommended": true,
-    "summary": "Context reset recommended (auto): 16 recent edit count exceed threshold 8",
+    "summary": "Context reset recommended (auto): 20 recent edit count exceed threshold 8",
     "reasons": [
-      "16 recent edit count exceed threshold 8"
+      "20 recent edit count exceed threshold 8"
     ],
     "candidates": [
       {
@@ -35,7 +35,7 @@
       {
         "key": "recent_edits",
         "label": "recent edit count",
-        "actual": 16,
+        "actual": 20,
         "threshold": 8,
         "triggered": true
       },
@@ -49,7 +49,7 @@
       {
         "key": "session_age_minutes",
         "label": "session age (minutes)",
-        "actual": 20,
+        "actual": 44,
         "threshold": 120,
         "triggered": false
       }
@@ -57,9 +57,9 @@
     "counters": {
       "wipTasks": 0,
       "blockedTasks": 0,
-      "recentEdits": 16,
+      "recentEdits": 20,
       "failedChecks": 0,
-      "sessionAgeMinutes": 20
+      "sessionAgeMinutes": 44
     }
   },
   "continuity": {
@@ -72,24 +72,28 @@
   "metrics": null,
   "recentEdits": [
     ".claude/memory/session-log.md",
-    ".claude/sessions/active.json",
+    ".claude/sessions/.last_inbox_check",
+    ".claude/state/changed-files.jsonl",
+    ".claude/state/handoff-artifact.json",
     ".claude/state/instructions-loaded.jsonl",
+    ".claude/state/precompact-snapshot.json",
     ".claude/state/session-events.jsonl",
     ".claude/state/session.events.jsonl",
     ".claude/state/session.json",
-    ".claude/sessions/.last_inbox_check",
-    ".claude/sessions/leases/d0fe79f4d49785e2fbd3198aef59a8e86c9c2fdbff9a7de4151ebd7ec6618e62.lock",
-    ".claude/state/changed-files.jsonl",
-    ".claude/state/handoff-artifact.json",
-    ".claude/state/precompact-snapshot.json",
-    ".claude/state/sessions/session-1787757823181090164.events.jsonl",
-    ".claude/state/sessions/session-1787757823181090164.json",
-    ".claude/state/sessions/session-1787759117237360019.events.jsonl",
-    ".claude/state/sessions/session-1787759117237360019.json",
-    ".claude/state/test-recommendation.json"
+    ".claude/state/test-recommendation.json",
+    "scripts/start_scrapling_mcp.py",
+    "tests/test_scrapling_launcher.py",
+    ".claude/sessions/broadcast.md",
+    ".claude/sessions/leases/2f754321d62f08ba8392b9b168b83e24ea2852bb5d815d63e767f6c3d23c6ac5.lock",
+    ".claude/sessions/leases/64cd2258b6aed3d95a768102d009d386bf17e5fe63b080a55bc7bdb855efb3ec.lock",
+    ".claude/sessions/leases/6e1d2248081a13668d3a9a486da0c0590415c93b379282119ff327092b939e43.lock",
+    ".claude/sessions/leases/6e52d2b3366492e90b812120a7df0880eb45a80b0ee093414e9a110420fed92e.lock",
+    ".claude/sessions/leases/921141e4b06d940b2849cc55ce3c65298a8c52e0cc206735296eb268781fd1bb.lock",
+    ".claude/sessions/leases/985f28a5db72ecec4f081d7352d2aea4d198624afeba7ab2a1a6e2f0ba5c927f.lock",
+    ".claude/sessions/leases/bceeae4151adcbeda1a812e38ef0463a8ecee213854745ff88f3b3bd418f10a3.lock"
   ],
   "sessionId": "",
-  "timestamp": "2026-08-26T16:06:03Z",
+  "timestamp": "2026-08-29T10:42:32Z",
   "version": "1.0.0",
   "wipTasks": null
 }
